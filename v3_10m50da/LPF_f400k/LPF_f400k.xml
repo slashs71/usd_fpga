@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2021.05.01.23:15:53"
+ outputDirectory="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="MAX 10"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10M50DAF484C6GES"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="avalon_streaming_sink" kind="avalon_streaming" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="rst" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="12" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port name="ast_sink_data" direction="input" role="data" width="12" />
+   <port name="ast_sink_valid" direction="input" role="valid" width="1" />
+   <port name="ast_sink_error" direction="input" role="error" width="2" />
+  </interface>
+  <interface name="avalon_streaming_source" kind="avalon_streaming" start="1">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="rst" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="12" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port name="ast_source_data" direction="output" role="data" width="12" />
+   <port name="ast_source_valid" direction="output" role="valid" width="1" />
+   <port name="ast_source_error" direction="output" role="error" width="2" />
+  </interface>
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="rst" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="LPF_f400k:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C6GES,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1619896549,AUTO_UNIQUE_ID=(altera_fir_compiler_ii:18.0:L_bandsFilter=1,MODE_STRING=None Set,ModeWidth=0,backPressure=false,bankCount=1,bankDisplay=0,bankInWidth=0,baseAddress=0,busAddressWidth=5,busDataWidth=16,chanPerInputInterface=1,chanPerOutputInterface=1,channelModes=0,1,2,3,clockRate=1,clockSlack=0,coeffBitWidth=8,coeffBitWidth_derived=8,coeffComplex=false,coeffFracBitWidth=0,coeffNum=21,coeffReload=false,coeffScaling=auto,coeffSetFixedValue=5,11,21,33,49,67,85,101,115,123,127,123,115,101,85,67,49,33,21,11,5,coeffSetFixedValueImag=0,0,0,0,0,0,0,0,coeffSetRealValue=0.0043801594,0.0085205375,0.015570143,0.02502197,0.036560046,0.049467107,0.062676896,0.074903064,0.084825452,0.091299829,0.09354959,0.091299829,0.084825452,0.074903064,0.062676896,0.049467107,0.036560046,0.02502197,0.015570143,0.0085205375,0.0043801594,coeffSetRealValueImag=0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.0530093, -0.04498, 0.0, 0.0749693, 0.159034, 0.224907, 0.249809, 0.224907, 0.159034, 0.0749693, 0.0, -0.04498, -0.0530093, -0.0321283, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,coeffSetScaleValue=0.0036830547244094485,0.008102720393700786,0.015468829842519684,0.02430816118110236,0.0360939362992126,0.049352933307086615,0.06261193031496062,0.07439770543307087,0.08471025866141732,0.09060314622047244,0.09354959,0.09060314622047244,0.08471025866141732,0.07439770543307087,0.06261193031496062,0.049352933307086615,0.0360939362992126,0.02430816118110236,0.015468829842519684,0.008102720393700786,0.0036830547244094485,coeffSetScaleValueImag=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,coeffType=int,coefficientReadback=false,coefficientWriteable=false,decimFactor=1,delayRAMBlockThreshold=20,deviceFamily=MAX 10,dspCount=0,dualMemDistRAMThreshold=1280,errorList=0,filterType=single,funcResult=-interp=1 -decim=1 -incycles=1 -len=21 -bankcount=1 -nsym -nband=1 -chans=1 -family=&quot;MAX 10&quot; 
+|{}|1|1|1|1|25|0|17|8|noCode|LUTS: 1641 DSPs: 0 RAM Bits: 0|,hardMultiplierThreshold=-1,inputBitWidth=12,inputChannelNum=1,inputFracBitWidth=0,inputInterfaceNum=1,inputRate=1,inputType=int,interpFactor=1,karatsuba=false,latency=17,latency_realOnly=17,lutCount=1641,mRAMThreshold=1000000,memBitCount=0,modeFormatted=--,num_modes=2,outBitWidth=12,outFracBitWidth=0,outFullFracBitWidth=0,outFullFracBitWidth_realOnly=0,outLSBRound=trunc,outLsbBitRem=10,outMSBRound=trunc,outMsbBitRem=3,outType=int,outWidth=25,outWidth_realOnly=25,outputInterfaceNum=1,outputfifodepth=16,outputfifodepth_realOnly=8,readWriteMode=read_write,reconfigurable=false,reconfigurable_list=0,speedGrade=medium,symmetryMode=nsym)"
+   instancePathKey="LPF_f400k"
+   kind="LPF_f400k"
+   version="1.0"
+   name="LPF_f400k">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1619896549" />
+  <parameter name="AUTO_DEVICE" value="10M50DAF484C6GES" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/LPF_f400k.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/dspba_library_package.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/dspba_library.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_math_pkg_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_lib_pkg_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_avalon_streaming_sink_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_avalon_streaming_source_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_roundsat_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/altera_avalon_sc_fifo.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/LPF_f400k_fir_compiler_ii_0_rtl_core.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/LPF_f400k_fir_compiler_ii_0_ast.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/LPF_f400k_fir_compiler_ii_0.vhd"
+       type="VHDL"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="D:/intelfpga/18.0/ip/altera/dsp/altera_fir_compiler_ii/src/HP_FIR_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="LPF_f400k">queue size: 0 starting:LPF_f400k "LPF_f400k"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="LPF_f400k"><![CDATA["<b>LPF_f400k</b>" reuses <b>altera_fir_compiler_ii</b> "<b>submodules/LPF_f400k_fir_compiler_ii_0</b>"]]></message>
+   <message level="Debug" culprit="LPF_f400k">queue size: 0 starting:altera_fir_compiler_ii "submodules/LPF_f400k_fir_compiler_ii_0"</message>
+   <message level="Debug" culprit="fir_compiler_ii_0"><![CDATA[D:/intelfpga/18.0/quartus/dspba/backend/windows64/fir_ip_api_interface LPF_f400k_fir_compiler_ii_0_rtl_core . MAX10 medium 0 1 1 1 21 1 1 1 nsym 1 12 0 8 0 0 false false -- 16 5 20 1280 1000000 -1 true false 1 -- <<< 5,11,21,33,49,67,85,101,115,123,127,123,115,101,85,67,49,33,21,11,5 ]]></message>
+   <message level="Debug" culprit="fir_compiler_ii_0"><![CDATA[OUTPARAMS -interp=1 -decim=1 -incycles=1 -len=21 -bankcount=1 -nsym -nband=1 -chans=1 -family="MAX 10" 
+|{}|1|1|1|1|25|0|17|8|true|LUTS: 1641 DSPs: 0 RAM Bits: 0|LPF_f400k_fir_compiler_ii_0_rtl_core.vhd|]]></message>
+   <message level="Info" culprit="fir_compiler_ii_0">PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 25, Bankcount 1, Latency 17, CoefBitWidth 8</message>
+   <message level="Info" culprit="fir_compiler_ii_0"><![CDATA["<b>LPF_f400k</b>" instantiated <b>altera_fir_compiler_ii</b> "<b>fir_compiler_ii_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_fir_compiler_ii:18.0:L_bandsFilter=1,MODE_STRING=None Set,ModeWidth=0,backPressure=false,bankCount=1,bankDisplay=0,bankInWidth=0,baseAddress=0,busAddressWidth=5,busDataWidth=16,chanPerInputInterface=1,chanPerOutputInterface=1,channelModes=0,1,2,3,clockRate=1,clockSlack=0,coeffBitWidth=8,coeffBitWidth_derived=8,coeffComplex=false,coeffFracBitWidth=0,coeffNum=21,coeffReload=false,coeffScaling=auto,coeffSetFixedValue=5,11,21,33,49,67,85,101,115,123,127,123,115,101,85,67,49,33,21,11,5,coeffSetFixedValueImag=0,0,0,0,0,0,0,0,coeffSetRealValue=0.0043801594,0.0085205375,0.015570143,0.02502197,0.036560046,0.049467107,0.062676896,0.074903064,0.084825452,0.091299829,0.09354959,0.091299829,0.084825452,0.074903064,0.062676896,0.049467107,0.036560046,0.02502197,0.015570143,0.0085205375,0.0043801594,coeffSetRealValueImag=0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.0530093, -0.04498, 0.0, 0.0749693, 0.159034, 0.224907, 0.249809, 0.224907, 0.159034, 0.0749693, 0.0, -0.04498, -0.0530093, -0.0321283, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,coeffSetScaleValue=0.0036830547244094485,0.008102720393700786,0.015468829842519684,0.02430816118110236,0.0360939362992126,0.049352933307086615,0.06261193031496062,0.07439770543307087,0.08471025866141732,0.09060314622047244,0.09354959,0.09060314622047244,0.08471025866141732,0.07439770543307087,0.06261193031496062,0.049352933307086615,0.0360939362992126,0.02430816118110236,0.015468829842519684,0.008102720393700786,0.0036830547244094485,coeffSetScaleValueImag=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,coeffType=int,coefficientReadback=false,coefficientWriteable=false,decimFactor=1,delayRAMBlockThreshold=20,deviceFamily=MAX 10,dspCount=0,dualMemDistRAMThreshold=1280,errorList=0,filterType=single,funcResult=-interp=1 -decim=1 -incycles=1 -len=21 -bankcount=1 -nsym -nband=1 -chans=1 -family=&quot;MAX 10&quot; 
+|{}|1|1|1|1|25|0|17|8|noCode|LUTS: 1641 DSPs: 0 RAM Bits: 0|,hardMultiplierThreshold=-1,inputBitWidth=12,inputChannelNum=1,inputFracBitWidth=0,inputInterfaceNum=1,inputRate=1,inputType=int,interpFactor=1,karatsuba=false,latency=17,latency_realOnly=17,lutCount=1641,mRAMThreshold=1000000,memBitCount=0,modeFormatted=--,num_modes=2,outBitWidth=12,outFracBitWidth=0,outFullFracBitWidth=0,outFullFracBitWidth_realOnly=0,outLSBRound=trunc,outLsbBitRem=10,outMSBRound=trunc,outMsbBitRem=3,outType=int,outWidth=25,outWidth_realOnly=25,outputInterfaceNum=1,outputfifodepth=16,outputfifodepth_realOnly=8,readWriteMode=read_write,reconfigurable=false,reconfigurable_list=0,speedGrade=medium,symmetryMode=nsym"
+   instancePathKey="LPF_f400k:.:fir_compiler_ii_0"
+   kind="altera_fir_compiler_ii"
+   version="18.0"
+   name="LPF_f400k_fir_compiler_ii_0">
+  <parameter name="outBitWidth" value="12" />
+  <parameter name="inputFracBitWidth" value="0" />
+  <parameter
+     name="coeffSetRealValueImag"
+     value="0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.0530093, -0.04498, 0.0, 0.0749693, 0.159034, 0.224907, 0.249809, 0.224907, 0.159034, 0.0749693, 0.0, -0.04498, -0.0530093, -0.0321283, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0" />
+  <parameter name="inputInterfaceNum" value="1" />
+  <parameter name="MODE_STRING" value="None Set" />
+  <parameter
+     name="funcResult"
+     value="-interp=1 -decim=1 -incycles=1 -len=21 -bankcount=1 -nsym -nband=1 -chans=1 -family=&quot;MAX 10&quot; 
+|{}|1|1|1|1|25|0|17|8|noCode|LUTS: 1641 DSPs: 0 RAM Bits: 0|" />
+  <parameter name="speedGrade" value="medium" />
+  <parameter name="outFullFracBitWidth_realOnly" value="0" />
+  <parameter name="coeffBitWidth" value="8" />
+  <parameter name="coeffType" value="int" />
+  <parameter name="outMSBRound" value="trunc" />
+  <parameter name="outLSBRound" value="trunc" />
+  <parameter name="coeffReload" value="false" />
+  <parameter name="delayRAMBlockThreshold" value="20" />
+  <parameter name="inputType" value="int" />
+  <parameter name="chanPerOutputInterface" value="1" />
+  <parameter name="busAddressWidth" value="5" />
+  <parameter name="coefficientWriteable" value="false" />
+  <parameter name="coeffSetFixedValueImag" value="0,0,0,0,0,0,0,0" />
+  <parameter name="num_modes" value="2" />
+  <parameter name="karatsuba" value="false" />
+  <parameter name="coeffBitWidth_derived" value="8" />
+  <parameter name="bankDisplay" value="0" />
+  <parameter name="baseAddress" value="0" />
+  <parameter
+     name="coeffSetRealValue"
+     value="0.0043801594,0.0085205375,0.015570143,0.02502197,0.036560046,0.049467107,0.062676896,0.074903064,0.084825452,0.091299829,0.09354959,0.091299829,0.084825452,0.074903064,0.062676896,0.049467107,0.036560046,0.02502197,0.015570143,0.0085205375,0.0043801594" />
+  <parameter name="coeffSetScaleValueImag" value="0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0" />
+  <parameter name="chanPerInputInterface" value="1" />
+  <parameter name="deviceFamily" value="MAX 10" />
+  <parameter name="dspCount" value="0" />
+  <parameter name="outType" value="int" />
+  <parameter name="symmetryMode" value="nsym" />
+  <parameter name="outLsbBitRem" value="10" />
+  <parameter name="decimFactor" value="1" />
+  <parameter name="ModeWidth" value="0" />
+  <parameter name="memBitCount" value="0" />
+  <parameter name="outputInterfaceNum" value="1" />
+  <parameter name="filterType" value="single" />
+  <parameter name="backPressure" value="false" />
+  <parameter name="inputBitWidth" value="12" />
+  <parameter name="coeffScaling" value="auto" />
+  <parameter name="outFullFracBitWidth" value="0" />
+  <parameter name="coeffNum" value="21" />
+  <parameter name="busDataWidth" value="16" />
+  <parameter name="coeffComplex" value="false" />
+  <parameter name="outputfifodepth_realOnly" value="8" />
+  <parameter name="inputChannelNum" value="1" />
+  <parameter name="channelModes" value="0,1,2,3" />
+  <parameter
+     name="coeffSetScaleValue"
+     value="0.0036830547244094485,0.008102720393700786,0.015468829842519684,0.02430816118110236,0.0360939362992126,0.049352933307086615,0.06261193031496062,0.07439770543307087,0.08471025866141732,0.09060314622047244,0.09354959,0.09060314622047244,0.08471025866141732,0.07439770543307087,0.06261193031496062,0.049352933307086615,0.0360939362992126,0.02430816118110236,0.015468829842519684,0.008102720393700786,0.0036830547244094485" />
+  <parameter name="latency" value="17" />
+  <parameter name="lutCount" value="1641" />
+  <parameter name="outFracBitWidth" value="0" />
+  <parameter name="outputfifodepth" value="16" />
+  <parameter name="clockRate" value="1" />
+  <parameter name="readWriteMode" value="read_write" />
+  <parameter name="reconfigurable" value="false" />
+  <parameter name="outWidth" value="25" />
+  <parameter name="coeffFracBitWidth" value="0" />
+  <parameter
+     name="coeffSetFixedValue"
+     value="5,11,21,33,49,67,85,101,115,123,127,123,115,101,85,67,49,33,21,11,5" />
+  <parameter name="modeFormatted" value="--" />
+  <parameter name="mRAMThreshold" value="1000000" />
+  <parameter name="bankCount" value="1" />
+  <parameter name="interpFactor" value="1" />
+  <parameter name="outWidth_realOnly" value="25" />
+  <parameter name="errorList" value="0" />
+  <parameter name="L_bandsFilter" value="1" />
+  <parameter name="clockSlack" value="0" />
+  <parameter name="outMsbBitRem" value="3" />
+  <parameter name="reconfigurable_list" value="0" />
+  <parameter name="dualMemDistRAMThreshold" value="1280" />
+  <parameter name="latency_realOnly" value="17" />
+  <parameter name="inputRate" value="1" />
+  <parameter name="coefficientReadback" value="false" />
+  <parameter name="bankInWidth" value="0" />
+  <parameter name="hardMultiplierThreshold" value="-1" />
+  <generatedFiles>
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/dspba_library_package.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/dspba_library.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_math_pkg_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_lib_pkg_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_avalon_streaming_sink_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_avalon_streaming_source_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/auk_dspip_roundsat_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/altera_avalon_sc_fifo.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/LPF_f400k_fir_compiler_ii_0_rtl_core.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/LPF_f400k_fir_compiler_ii_0_ast.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="K:/work/tr/SOFT_work/FPGA/v3_10m50da/LPF_f400k/synthesis/submodules/LPF_f400k_fir_compiler_ii_0.vhd"
+       type="VHDL"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/intelfpga/18.0/ip/altera/dsp/altera_fir_compiler_ii/src/HP_FIR_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="LPF_f400k" as="fir_compiler_ii_0" />
+  <messages>
+   <message level="Debug" culprit="LPF_f400k">queue size: 0 starting:altera_fir_compiler_ii "submodules/LPF_f400k_fir_compiler_ii_0"</message>
+   <message level="Debug" culprit="fir_compiler_ii_0"><![CDATA[D:/intelfpga/18.0/quartus/dspba/backend/windows64/fir_ip_api_interface LPF_f400k_fir_compiler_ii_0_rtl_core . MAX10 medium 0 1 1 1 21 1 1 1 nsym 1 12 0 8 0 0 false false -- 16 5 20 1280 1000000 -1 true false 1 -- <<< 5,11,21,33,49,67,85,101,115,123,127,123,115,101,85,67,49,33,21,11,5 ]]></message>
+   <message level="Debug" culprit="fir_compiler_ii_0"><![CDATA[OUTPARAMS -interp=1 -decim=1 -incycles=1 -len=21 -bankcount=1 -nsym -nband=1 -chans=1 -family="MAX 10" 
+|{}|1|1|1|1|25|0|17|8|true|LUTS: 1641 DSPs: 0 RAM Bits: 0|LPF_f400k_fir_compiler_ii_0_rtl_core.vhd|]]></message>
+   <message level="Info" culprit="fir_compiler_ii_0">PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 25, Bankcount 1, Latency 17, CoefBitWidth 8</message>
+   <message level="Info" culprit="fir_compiler_ii_0"><![CDATA["<b>LPF_f400k</b>" instantiated <b>altera_fir_compiler_ii</b> "<b>fir_compiler_ii_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>
