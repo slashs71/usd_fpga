@@ -1,0 +1,5 @@
+
+
+K:/work/tr/SOFT_work/FPGA/v4/pll.v
+
+Jun 03 11PM:12:54>: Failed to generate the synthesis netlist file
