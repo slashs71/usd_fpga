@@ -1,0 +1,32 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x06250d82: RESR_TMW + 0x20d82 (??1TMW_WND@@UAE@XZ + 0x832)
+	0x6821ba48: mfc90 + 0x5ba48
+	0x6821a63c: mfc90 + 0x5a63c
+	0x6821a8c8: mfc90 + 0x5a8c8
+	0x682185b2: mfc90 + 0x585b2
+	0x76eb62f9: USER32 + 0x162f9 (gapfnScSendMessage + 0x331)
+	0x76eb6d39: USER32 + 0x16d39 (GetThreadDesktop + 0xd6)
+	0x76eb77c3: USER32 + 0x177c3 (CharPrevW + 0x137)
+	0x76eb7bc9: USER32 + 0x17bc9 (DispatchMessageA + 0xe)
+	0x6825a866: mfc90 + 0x9a866
+	0x002a1968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x682271e7: mfc90 + 0x671e7
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x753d3369: kernel32 + 0x13369 (BaseThreadInitThunk + 0x11)
+	0x773d9901: ntdll + 0x39901 (RtlInitializeExceptionChain + 0x62)
+	0x773d98d4: ntdll + 0x398d4 (RtlInitializeExceptionChain + 0x35)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: GED, STED, RPW, MED, PGMW, STED</error>
+	<date>Thu Jun 10 17:53:51 2021</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X06250D82
+Current editor: GED, STED, RPW, MED, PGMW, STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
