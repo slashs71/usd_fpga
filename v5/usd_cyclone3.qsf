@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP3C16F484C7
 set_global_assignment -name TOP_LEVEL_ENTITY usd_cyclone3
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:34:35  JUNE 07, 2021"
-set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name LAST_QUARTUS_VERSION 9.1
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -123,7 +123,6 @@ set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name QIP_FILE fifo32.qip
 set_global_assignment -name VERILOG_FILE source/data_send.v
 set_global_assignment -name SIGNALTAP_FILE stp/stp1.stp
@@ -264,3 +263,6 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=180" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=20620" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=56806" -section_id auto_signaltap_0
+set_global_assignment -name QIP_FILE nco_het.qip
+set_global_assignment -name QIP_FILE ip/const2/const2.qip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

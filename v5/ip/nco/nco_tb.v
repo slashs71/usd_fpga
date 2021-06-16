@@ -1,4 +1,4 @@
-//	Copyright (C) 1988-2007 Altera Corporation
+//	Copyright (C) 1988-2009 Altera Corporation
 
 //	Any megafunction design, and related net list (encrypted or decrypted),
 //	support information, device programming or simulation file, and any other
@@ -19,18 +19,19 @@
 //	their respective licensors.  No other licenses, including any licenses
 //	needed under any third party's intellectual property, are provided herein.
 
-//   NCO ver 9.0 VERILOG HDL TESTBENCH
+//   NCO ver 9.1 VERILOG HDL TESTBENCH
 `timescale 1ps / 1ps
 module nco_tb;
-wire [11:0] sin_val;
-reg [31:0] phi;
+
 wire out_valid;
+wire [15:0] sin_val;
+reg [31:0] phi;
 reg reset_n;
-wire reset; 
-assign reset = !reset_n;
 reg clken;
 reg clk;
 
+parameter CYCLE = 62500;
+parameter HALF_CYCLE = 31250;
 initial
   begin
     $dumpvars;
@@ -38,13 +39,13 @@ initial
     #0 reset_n = 1'b0;
     #0 clken = 1'b1;
     #0 phi = 32'b00100000000001000001100010010011;
-    #437499 reset_n = 1'b1;
+    #(14*HALF_CYCLE) reset_n = 1'b1;
   end
 
 always
   begin
-    #31250 clk = 1;
-    #31250 clk = 0;
+    #HALF_CYCLE clk = 1;
+    #HALF_CYCLE clk = 0;
   end
 
 integer sin_ch, sin_print;
@@ -57,18 +58,18 @@ always @(posedge clk)
   begin
     if(reset_n==1'b1 & out_valid==1'b1)
       begin
-        if (sin_val[11:0] < (1<<11))
-          sin_print = sin_val[11:0];
+        if (sin_val[15:0] < (1<<15))
+          sin_print = sin_val[15:0];
         else
-          sin_print =  sin_val[11:0] - (1<<12);
+          sin_print =  sin_val[15:0] - (1<<16);
 
-    $fdisplay (sin_ch, "%d", sin_print);
+    $fdisplay (sin_ch, "%0d", sin_print);
       end
 end
 
 nco i_nco (
     .out_valid(out_valid),
-    .fsin_o(sin_val[11:0]),
+    .fsin_o(sin_val[15:0]),
     .phi_inc_i(phi[31:0]),
     .reset_n(reset_n),
     .clken(clken),

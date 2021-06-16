@@ -18,4 +18,4 @@ PATTERN
 INPUTS phi_inc_i[31..0];
 PATTERN
 0> 537139347;
-OUTPUTS fsin_o[11..0];
+OUTPUTS fsin_o[15..0];

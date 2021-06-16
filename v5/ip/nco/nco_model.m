@@ -6,7 +6,7 @@
 %    output :  s           : sine wave output
 %              c           : cosine wave output
 function [s,c] = nco_model(phi_inc_i,phase_mod_i,freq_mod_i)
-addpath c:/altera/90/ip/altera/nco/lib/ip_toolbench/../;
+addpath d:/altera/91/ip/altera/nco/lib/ip_toolbench/../;
 if(nargin==0)
  fprintf('Error using nco_model : Not enough input arguments\n');
 else
@@ -32,11 +32,11 @@ N=length(phi_inc_i);
 numch = 1.0;
 apr = 32.0;
 apri = 16.0;
-mpr = 12.0;
+mpr = 16.0;
 aprp = 16.0;
 aprf = 32.0;
-dpri = 5.0;
-arch = 3.0;
+dpri = 0.0;
+arch = 2.0;
 wantFmod = 0.0;
 wantPmod = 0.0;
 dual = 1.0;

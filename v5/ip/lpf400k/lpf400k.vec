@@ -1,6 +1,6 @@
 % units default to ns %
 START 0 ;
-STOP 1325 ;
+STOP 1775 ;
 INTERVAL 5 ;
 INPUTS clk ;
 PATTERN
@@ -11,7 +11,7 @@ PATTERN
 0>    1
 5>    1
 95>  0 ;
-INPUTS data_in[11..0];
+INPUTS data_in[15..0];
 PATTERN         % test Inpluse %
 0>     0
 175>  1

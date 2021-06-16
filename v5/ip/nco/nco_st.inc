@@ -28,5 +28,5 @@ FUNCTION nco_st
 )
 
 RETURNS (
-     fsin_o[11..0]
+     fsin_o[15..0]
 );

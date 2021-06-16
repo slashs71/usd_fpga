@@ -19,5 +19,5 @@ FUNCTION const32
 )
 
 RETURNS (
-	result[5..0]
+	result[31..0]
 );
