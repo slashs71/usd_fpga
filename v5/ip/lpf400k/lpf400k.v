@@ -86,7 +86,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "filter_rate" value="Single Rate"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "filter_factor" value="2"  type="INTEGER"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficient_scaling_type" value="Auto"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "coefficient_scaling_factor" value="3179.6581762125516"  type="STRING"  enable="0" />
+// Retrieval info:      <PRIVATE name = "coefficient_scaling_factor" value="3386.675615864136"  type="STRING"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficient_bit_width" value="8"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "coefficient_binary_point_position" value="0"  type="INTEGER"  enable="0" />
 // Retrieval info:      <PRIVATE name = "number_of_input_channels" value="1"  type="INTEGER"  enable="1" />
@@ -97,7 +97,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "output_number_system" value="Custom Resolution"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_bit_width" value="12"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_bits_right_of_binary_point" value="12"  type="INTEGER"  enable="0" />
-// Retrieval info:      <PRIVATE name = "output_bits_removed_from_lsb" value="8"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "output_bits_removed_from_lsb" value="10"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_lsb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_msb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "flow_control" value="0"  type="INTEGER"  enable="1" />
@@ -114,13 +114,13 @@ endmodule
 // Retrieval info:      <PRIVATE name = "force_non_symmetric_structure" value="0"  type="BOOLEAN"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficients_reload" value="0"  type="BOOLEAN"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficients_reload_sgl_clock" value="0"  type="BOOLEAN"  enable="1" />
-// Retrieval info:      <PRIVATE name = "max_clocks_to_compute" value="1"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "set_1" value="Low Pass Set, Floating, Low Pass, Rectangular, 15, 1.0E7, 200000.0, 3750000.0, 0, 0.035, 0.0362736, 0.0373721, 0.0382853, 0.0390047, 0.0395234, 0.0398366, 0.0399414, 0.0398366, 0.0395234, 0.0390047, 0.0382853, 0.0373721, 0.0362736, 0.035"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "max_clocks_to_compute" value="4"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "set_1" value="Low Pass Set, Floating, Low Pass, Hanning, 27, 8000000.0, 150000.0, 3750000.0, 0, 3.06711E-4, 0.00129726, 0.00303807, 0.00553618, 0.00873463, 0.0125134, 0.0166958, 0.0210605, 0.0253572, 0.0293261, 0.032718, 0.0353141, 0.0369442, 0.0374999, 0.0369442, 0.0353141, 0.032718, 0.0293261, 0.0253572, 0.0210605, 0.0166958, 0.0125134, 0.00873463, 0.00553618, 0.00303807, 0.00129726, 3.06711E-4"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "number_of_sets" value="1"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_full_bit_width" value="23"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_full_bits_right_of_binary_point" value="18"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "coefficient_reload_bit_width" value="11"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "logic_cell" value="793"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "coefficient_reload_bit_width" value="19"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "logic_cell" value="1308"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m512" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m4k" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m144k" value="0"  type="INTEGER"  enable="1" />

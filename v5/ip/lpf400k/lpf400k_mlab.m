@@ -12,19 +12,19 @@
 %FILTER PARAMETER                                                                                                                       
 %Input Data Type:	Signed
 %Input Data Width:	12
-%MSB Truncated Bits: %MSB Satuated Bits :3
-%LSB Truncated bits:%LSB Rounded bits  :8
+%MSB Truncated Bits: %MSB Satuated Bits :1
+%LSB Truncated bits:%LSB Rounded bits  :10
 %FIR Width (Full Calculation Width Before Output Width Adjust) :   23
 %-----------------------------------------------------------------------------------------------------------
 
 	%MegaWizard Scaled Coefficient Values
 	function  output = lpf400k_mlab_mat (stimulation, output)
-	coef_matrix=[111 115 118 121 124 125 126 127 126 125 124 121 118 115 111 ];
+	coef_matrix=[1 4 10 18 29 42 56 71 85 99 110 119 125 127 125 119 110 99 85 71 56 42 29 18 10 4 1 ];
 	INTER_FACTOR  = 1;
 	DECI_FACTOR  = 1; 
-	MSB_RM  = 3;
+	MSB_RM  = 1;
 	MSB_TYPE  = 0;
-	LSB_RM  = 8;
+	LSB_RM  = 10;
 	LSB_TYPE  = 0;
 	FIR_WIDTH  = 23;
 	OUT_WIDTH  = FIR_WIDTH - MSB_RM - LSB_RM ;

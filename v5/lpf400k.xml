@@ -9,8 +9,8 @@
 <PRIVATE name = "filter_rate" value="Single Rate"  type="STRING"  enable="1" />
 <PRIVATE name = "filter_factor" value="2"  type="INTEGER"  enable="0" />
 <PRIVATE name = "coefficient_scaling_type" value="Auto"  type="STRING"  enable="1" />
-<PRIVATE name = "coefficient_scaling_factor" value="3179.6581762125516"  type="STRING"  enable="0" />
-<PRIVATE name = "coefficient_bit_width" value="8"  type="INTEGER"  enable="1" />
+<PRIVATE name = "coefficient_scaling_factor" value="873800.6074358576"  type="STRING"  enable="0" />
+<PRIVATE name = "coefficient_bit_width" value="16"  type="INTEGER"  enable="1" />
 <PRIVATE name = "coefficient_binary_point_position" value="0"  type="INTEGER"  enable="0" />
 <PRIVATE name = "number_of_input_channels" value="1"  type="INTEGER"  enable="1" />
 <PRIVATE name = "input_number_system" value="Signed Binary"  type="STRING"  enable="1" />
@@ -20,7 +20,7 @@
 <PRIVATE name = "output_number_system" value="Custom Resolution"  type="STRING"  enable="1" />
 <PRIVATE name = "output_bit_width" value="12"  type="INTEGER"  enable="1" />
 <PRIVATE name = "output_bits_right_of_binary_point" value="12"  type="INTEGER"  enable="0" />
-<PRIVATE name = "output_bits_removed_from_lsb" value="8"  type="INTEGER"  enable="1" />
+<PRIVATE name = "output_bits_removed_from_lsb" value="19"  type="INTEGER"  enable="1" />
 <PRIVATE name = "output_lsb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 <PRIVATE name = "output_msb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 <PRIVATE name = "flow_control" value="0"  type="INTEGER"  enable="1" />
@@ -38,12 +38,12 @@
 <PRIVATE name = "coefficients_reload" value="0"  type="BOOLEAN"  enable="0" />
 <PRIVATE name = "coefficients_reload_sgl_clock" value="0"  type="BOOLEAN"  enable="1" />
 <PRIVATE name = "max_clocks_to_compute" value="1"  type="INTEGER"  enable="1" />
-<PRIVATE name = "set_1" value="Low Pass Set, Floating, Low Pass, Rectangular, 15, 1.0E7, 200000.0, 3750000.0, 0, 0.035, 0.0362736, 0.0373721, 0.0382853, 0.0390047, 0.0395234, 0.0398366, 0.0399414, 0.0398366, 0.0395234, 0.0390047, 0.0382853, 0.0373721, 0.0362736, 0.035"  type="STRING"  enable="1" />
+<PRIVATE name = "set_1" value="Low Pass Set, Floating, Low Pass, Hanning, 51, 8000000.0, 150000.0, 3750000.0, 0, 9.05529E-6, 5.95459E-5, 1.88257E-4, 4.32959E-4, 8.30544E-4, 0.0014151, 0.00221603, 0.0032563, 0.00455089, 0.00610555, 0.0079159, 0.00996694, 0.0122331, 0.0146784, 0.0172577, 0.0199178, 0.022599, 0.0252374, 0.0277669, 0.0301214, 0.0322378, 0.0340578, 0.0355304, 0.0366136, 0.0372764, 0.0374994, 0.0372764, 0.0366136, 0.0355304, 0.0340578, 0.0322378, 0.0301214, 0.0277669, 0.0252374, 0.022599, 0.0199178, 0.0172577, 0.0146784, 0.0122331, 0.00996694, 0.0079159, 0.00610555, 0.00455089, 0.0032563, 0.00221603, 0.0014151, 8.30544E-4, 4.32959E-4, 1.88257E-4, 5.95459E-5, 9.05529E-6"  type="STRING"  enable="1" />
 <PRIVATE name = "number_of_sets" value="1"  type="INTEGER"  enable="1" />
-<PRIVATE name = "output_full_bit_width" value="23"  type="INTEGER"  enable="1" />
-<PRIVATE name = "output_full_bits_right_of_binary_point" value="18"  type="INTEGER"  enable="1" />
-<PRIVATE name = "coefficient_reload_bit_width" value="11"  type="INTEGER"  enable="1" />
-<PRIVATE name = "logic_cell" value="793"  type="INTEGER"  enable="1" />
+<PRIVATE name = "output_full_bit_width" value="32"  type="INTEGER"  enable="1" />
+<PRIVATE name = "output_full_bits_right_of_binary_point" value="26"  type="INTEGER"  enable="1" />
+<PRIVATE name = "coefficient_reload_bit_width" value="19"  type="INTEGER"  enable="1" />
+<PRIVATE name = "logic_cell" value="2924"  type="INTEGER"  enable="1" />
 <PRIVATE name = "m512" value="0"  type="INTEGER"  enable="1" />
 <PRIVATE name = "m4k" value="0"  type="INTEGER"  enable="1" />
 <PRIVATE name = "m144k" value="0"  type="INTEGER"  enable="1" />

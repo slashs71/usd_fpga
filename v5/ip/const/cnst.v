@@ -33,7 +33,7 @@
 //applicable agreement for further details.
 
 
-//lpm_constant CBX_AUTO_BLACKBOX="ALL" ENABLE_RUNTIME_MOD="NO" LPM_CVALUE=20041893 LPM_WIDTH=32 result
+//lpm_constant CBX_AUTO_BLACKBOX="ALL" ENABLE_RUNTIME_MOD="NO" LPM_CVALUE=40020C4A LPM_WIDTH=32 result
 //VERSION_BEGIN 9.0 cbx_lpm_constant 2008:10:27:14:59:22:SJ cbx_mgl 2009:01:29:16:12:07:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -43,15 +43,15 @@
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  cnst_lpm_constant_m19
+module  cnst_lpm_constant_949
 	( 
 	result) ;
 	output   [31:0]  result;
 
 
 	assign
-		result = 32'b00100000000001000001100010010011;
-endmodule //cnst_lpm_constant_m19
+		result = 32'b01000000000000100000110001001010;
+endmodule //cnst_lpm_constant_949
 //VALID FILE
 
 
@@ -66,7 +66,7 @@ module cnst (
 	wire [31:0] sub_wire0;
 	wire [31:0] result = sub_wire0[31:0];
 
-	cnst_lpm_constant_m19	cnst_lpm_constant_m19_component (
+	cnst_lpm_constant_949	cnst_lpm_constant_949_component (
 				.result (sub_wire0));
 
 endmodule
@@ -79,9 +79,9 @@ endmodule
 // Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: Radix NUMERIC "10"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
-// Retrieval info: PRIVATE: Value NUMERIC "537139347"
+// Retrieval info: PRIVATE: Value NUMERIC "1073876042"
 // Retrieval info: PRIVATE: nBit NUMERIC "32"
-// Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "537139347"
+// Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "1073876042"
 // Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_CONSTANT"
 // Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "32"

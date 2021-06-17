@@ -4,7 +4,7 @@ module filtmx_form
 	output reg filtmx
 );
 
-localparam Nfft=512;
+localparam Nfft=32;
 
 integer cnt;
 reg [1:0] sink_edge;
@@ -25,7 +25,7 @@ always@(posedge clk)begin
 end
 
 always@(posedge clk)begin
-if (cnt<250)
+if (cnt<13)
 	filtmx<=0;
 else
 	filtmx<=1;
