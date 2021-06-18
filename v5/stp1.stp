@@ -6,17 +6,19 @@
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
     <position_info>
       <single attribute="active tab" value="1"/>
-      <single attribute="data horizontal scroll position" value="111"/>
-      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="4"/>
       <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="2"/>
-      <single attribute="zoom offset denominator" value="2"/>
-      <single attribute="zoom offset numerator" value="130049"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="130560"/>
       <multi attribute="timebars" size="5" value="230,15,150,23,479"/>
+      <single attribute="setup vertical scroll position" value="15"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
     </position_info>
-    <signal_set global_temp="1" name="signal_set: 2021/06/17 16:25:10  #0">
+    <signal_set global_temp="1" name="signal_set: 2021/06/18 11:18:16  #0">
       <clock name="pll:inst5|c1" polarity="posedge" tap_mode="classic"/>
-      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="1024" trigger_in_enable="no" trigger_out_enable="no"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="512" trigger_in_enable="no" trigger_out_enable="no"/>
       <top_entity/>
       <signal_vec>
         <trigger_input_vec>
@@ -100,37 +102,6 @@
           <wire name="fft32:inst36|sink_imag[7]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|sink_imag[8]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|sink_imag[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[13]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[14]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[15]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[16]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[17]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[18]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[9]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[0]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[10]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[11]" tap_mode="classic" type="combinatorial"/>
@@ -151,6 +122,30 @@
           <wire name="fft32:inst36|source_real[8]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[9]" tap_mode="classic" type="combinatorial"/>
           <wire name="filtmx_form:inst31|filtmx" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[9]" tap_mode="classic" type="combinatorial"/>
         </trigger_input_vec>
         <data_input_vec>
           <wire name="fft32:inst34|sink_eop" tap_mode="classic" type="combinatorial"/>
@@ -233,37 +228,6 @@
           <wire name="fft32:inst36|sink_imag[7]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|sink_imag[8]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|sink_imag[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[13]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[14]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[15]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[16]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[17]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[18]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[9]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[0]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[10]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[11]" tap_mode="classic" type="combinatorial"/>
@@ -284,6 +248,30 @@
           <wire name="fft32:inst36|source_real[8]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[9]" tap_mode="classic" type="combinatorial"/>
           <wire name="filtmx_form:inst31|filtmx" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[9]" tap_mode="classic" type="combinatorial"/>
         </data_input_vec>
         <storage_qualifier_input_vec>
           <wire name="fft32:inst34|sink_eop" tap_mode="classic" type="combinatorial"/>
@@ -366,37 +354,6 @@
           <wire name="fft32:inst36|sink_imag[7]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|sink_imag[8]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|sink_imag[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|sink_real[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[13]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[14]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[15]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[16]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[17]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[18]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="fft32:inst36|source_imag[9]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[0]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[10]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[11]" tap_mode="classic" type="combinatorial"/>
@@ -417,6 +374,30 @@
           <wire name="fft32:inst36|source_real[8]" tap_mode="classic" type="combinatorial"/>
           <wire name="fft32:inst36|source_real[9]" tap_mode="classic" type="combinatorial"/>
           <wire name="filtmx_form:inst31|filtmx" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lpm_mult0:inst11|result[9]" tap_mode="classic" type="combinatorial"/>
         </storage_qualifier_input_vec>
       </signal_vec>
       <presentation>
@@ -511,42 +492,7 @@
             <net is_signal_inverted="no" name="fft32:inst36|sink_imag[10]"/>
             <net is_signal_inverted="no" name="fft32:inst36|sink_imag[11]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="fft32:inst36|sink_real" order="lsb_to_msb" radix="bar_signed" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[0]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[1]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[2]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[3]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[4]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[5]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[6]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[7]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[8]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[9]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[10]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[11]"/>
-          </bus>
           <net is_signal_inverted="no" name="filtmx_form:inst31|filtmx"/>
-          <bus is_signal_inverted="no" link="all" name="fft32:inst36|source_imag" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[0]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[1]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[2]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[3]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[4]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[5]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[6]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[7]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[8]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[9]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[10]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[11]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[12]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[13]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[14]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[15]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[16]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[17]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[18]"/>
-          </bus>
           <bus is_signal_inverted="no" link="all" name="fft32:inst36|source_real" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
             <net is_signal_inverted="no" name="fft32:inst36|source_real[0]"/>
             <net is_signal_inverted="no" name="fft32:inst36|source_real[1]"/>
@@ -567,6 +513,32 @@
             <net is_signal_inverted="no" name="fft32:inst36|source_real[16]"/>
             <net is_signal_inverted="no" name="fft32:inst36|source_real[17]"/>
             <net is_signal_inverted="no" name="fft32:inst36|source_real[18]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="lpm_mult0:inst11|result" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[0]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[1]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[2]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[3]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[4]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[5]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[6]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[7]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[8]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[9]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[10]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[11]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[12]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[13]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[14]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[15]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[16]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[17]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[18]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[19]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[20]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[21]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[22]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[23]"/>
           </bus>
         </data_view>
         <setup_view>
@@ -660,42 +632,7 @@
             <net is_signal_inverted="no" name="fft32:inst36|sink_imag[10]"/>
             <net is_signal_inverted="no" name="fft32:inst36|sink_imag[11]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="fft32:inst36|sink_real" order="lsb_to_msb" radix="bar_signed" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[0]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[1]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[2]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[3]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[4]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[5]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[6]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[7]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[8]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[9]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[10]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|sink_real[11]"/>
-          </bus>
           <net is_signal_inverted="no" name="filtmx_form:inst31|filtmx"/>
-          <bus is_signal_inverted="no" link="all" name="fft32:inst36|source_imag" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[0]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[1]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[2]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[3]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[4]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[5]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[6]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[7]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[8]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[9]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[10]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[11]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[12]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[13]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[14]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[15]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[16]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[17]"/>
-            <net is_signal_inverted="no" name="fft32:inst36|source_imag[18]"/>
-          </bus>
           <bus is_signal_inverted="no" link="all" name="fft32:inst36|source_real" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
             <net is_signal_inverted="no" name="fft32:inst36|source_real[0]"/>
             <net is_signal_inverted="no" name="fft32:inst36|source_real[1]"/>
@@ -717,9 +654,35 @@
             <net is_signal_inverted="no" name="fft32:inst36|source_real[17]"/>
             <net is_signal_inverted="no" name="fft32:inst36|source_real[18]"/>
           </bus>
+          <bus is_signal_inverted="no" link="all" name="lpm_mult0:inst11|result" order="lsb_to_msb" radix="hex" state="expand" type="combinatorial">
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[0]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[1]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[2]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[3]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[4]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[5]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[6]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[7]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[8]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[9]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[10]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[11]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[12]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[13]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[14]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[15]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[16]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[17]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[18]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[19]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[20]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[21]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[22]"/>
+            <net is_signal_inverted="no" name="lpm_mult0:inst11|result[23]"/>
+          </bus>
         </setup_view>
       </presentation>
-      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2021/06/17 16:25:10  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2021/06/18 11:18:16  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
         <events use_custom_flow_control="no">
           <level enabled="yes" name="condition1" type="basic">'fft32:inst34|sink_sop' == rising edge
@@ -729,8 +692,8 @@
           </level>
         </events>
         <storage_qualifier_events>
-          <transitional>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-            <pwr_up_transitional>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+          <transitional>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+            <pwr_up_transitional>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
             </pwr_up_transitional>
           </transitional>
           <storage_qualifier_level type="basic">
@@ -750,7 +713,7 @@
           </storage_qualifier_level>
         </storage_qualifier_events>
         <log>
-          <data global_temp="1" name="log: 2021/06/17 16:25:10  #2"/>
+          <data global_temp="1" name="log: 2021/06/18 11:18:16  #2"/>
           <extradata/>
         </log>
       </trigger>

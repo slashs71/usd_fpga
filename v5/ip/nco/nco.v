@@ -82,7 +82,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "MAXF" value="256"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "rfs1" value="xxx.hex"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "devicefamily" value="Cyclone III"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "DPRI" value="5"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "DPRI" value="2"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "DEVICE" value="CycloneIII"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "ACCUM_SCLR" value="0"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "ARCH" value="CORDIC_ARCH"  type="STRING"  enable="1" />
@@ -93,11 +93,11 @@ endmodule
 // Retrieval info:      <PRIVATE name = "CK_VALUE" value="10"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "CK_UNIT" value="ns"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "CK_MULT" value="e-9"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "FSAMP_VALUE" value="16"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "FSAMP_VALUE" value="8"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "FREQ_VALUE" value="2001"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "MPR" value="12"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "APR" value="32"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "APRI" value="16"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "APRI" value="12"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "FSAMP_UNIT" value="MHz"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "FSAMP_MULT" value="1e6"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "FREQ_UNIT" value="kHz"  type="STRING"  enable="1" />
@@ -116,12 +116,12 @@ endmodule
 // Retrieval info:      <PRIVATE name = "WANT_VHDL_SIM" value="YES"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "WANT_MATLAB" value="YES"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "WANT_VEC" value="YES"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "PHI_INC" value="537139347"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "PHI_INC" value="1074278695"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "MODULE_NAME" value="nco_st"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NETLIST_FILE_NAME" value="nco_st.v"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "PHASE_INC" value="4096"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "FREQ_INC" value="268435456"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "NUM_LCELLS" value="2185"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "NUM_LCELLS" value="2025"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NUM_MEM_BITS" value="0"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NUM_EABS" value="0"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NUM_DSP_BLOCKS" value="0"  type="STRING"  enable="1" />
