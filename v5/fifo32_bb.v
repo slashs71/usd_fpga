@@ -39,7 +39,8 @@ module fifo32 (
 	wrreq,
 	q,
 	rdempty,
-	rdfull);
+	rdfull,
+	rdusedw);
 
 	input	[11:0]  data;
 	input	  rdclk;
@@ -49,6 +50,7 @@ module fifo32 (
 	output	[11:0]  q;
 	output	  rdempty;
 	output	  rdfull;
+	output	[4:0]  rdusedw;
 
 endmodule
 
@@ -81,7 +83,7 @@ endmodule
 // Retrieval info: PRIVATE: output_width NUMERIC "12"
 // Retrieval info: PRIVATE: rsEmpty NUMERIC "1"
 // Retrieval info: PRIVATE: rsFull NUMERIC "1"
-// Retrieval info: PRIVATE: rsUsedW NUMERIC "0"
+// Retrieval info: PRIVATE: rsUsedW NUMERIC "1"
 // Retrieval info: PRIVATE: sc_aclr NUMERIC "0"
 // Retrieval info: PRIVATE: sc_sclr NUMERIC "0"
 // Retrieval info: PRIVATE: wsEmpty NUMERIC "0"
@@ -104,6 +106,7 @@ endmodule
 // Retrieval info: USED_PORT: rdempty 0 0 0 0 OUTPUT NODEFVAL rdempty
 // Retrieval info: USED_PORT: rdfull 0 0 0 0 OUTPUT NODEFVAL rdfull
 // Retrieval info: USED_PORT: rdreq 0 0 0 0 INPUT NODEFVAL rdreq
+// Retrieval info: USED_PORT: rdusedw 0 0 5 0 OUTPUT NODEFVAL rdusedw[4..0]
 // Retrieval info: USED_PORT: wrclk 0 0 0 0 INPUT NODEFVAL wrclk
 // Retrieval info: USED_PORT: wrreq 0 0 0 0 INPUT NODEFVAL wrreq
 // Retrieval info: CONNECT: @data 0 0 12 0 data 0 0 12 0
@@ -114,6 +117,7 @@ endmodule
 // Retrieval info: CONNECT: @wrclk 0 0 0 0 wrclk 0 0 0 0
 // Retrieval info: CONNECT: rdfull 0 0 0 0 @rdfull 0 0 0 0
 // Retrieval info: CONNECT: rdempty 0 0 0 0 @rdempty 0 0 0 0
+// Retrieval info: CONNECT: rdusedw 0 0 5 0 @rdusedw 0 0 5 0
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: GEN_FILE: TYPE_NORMAL fifo32.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL fifo32.inc TRUE

@@ -25,5 +25,6 @@ FUNCTION fifo32
 RETURNS (
 	q[11..0],
 	rdempty,
-	rdfull
+	rdfull,
+	rdusedw[4..0]
 );
