@@ -54,7 +54,7 @@ always@(posedge clk)begin
 		15, 17:
 				 value <= 2028;
 		16:
-				 value <= 2048;					
+				 value <= 2047;					
 		default:
 					value <= 0;
 	endcase

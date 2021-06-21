@@ -15,11 +15,11 @@
 
 FUNCTION mx2to1 
 (
-	data0x[11..0],
-	data1x[11..0],
+	data0x[15..0],
+	data1x[15..0],
 	sel
 )
 
 RETURNS (
-	result[11..0]
+	result[15..0]
 );

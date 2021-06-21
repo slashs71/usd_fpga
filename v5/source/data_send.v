@@ -2,11 +2,11 @@ module data_send(
 	input clk,
 	input rst, full, txBusy,
 	
-	output reg req	
+	output reg oNewData,oRdclk	
 );
 
 localparam cnt_end = 10;
-localparam N = 512;
+localparam N = 32;
 
 reg[7:0] data;
 reg[9:0] cntN;
@@ -17,7 +17,7 @@ reg[9:0] cntN;
 	// Declare states
 	
 	
-	localparam S0 = 0, S1 = 1, S2 = 2, S3 = 3, S4 = 4;
+	localparam S0 = 0, S1 = 1, S2 = 2, S3 = 3, S4 = 4, S5 = 5;
 
 always@(posedge clk or posedge rst)begin	
 	if (rst)
@@ -35,12 +35,17 @@ always@(posedge clk or posedge rst)begin
 				else	
 					state<=S0;
 					
-			S1:	// req
+			S1:	// rdclk
 				begin					
 					state	<= S2;
 				end
-				
-			S2:   // wait for uart not busy
+			S2: 
+				begin
+					state	<= S3;
+				end
+			S3:	// newData
+				state	<= S4;
+			S4:   // wait for uart not busy
 				if (!txBusy)					
 					if (cntN<N) begin
 						state	<= S1;
@@ -57,9 +62,18 @@ end
 always@(posedge clk)begin
 case (state)
 	S1:
-		req<=1;
+		oRdclk<=1;
 	default:
-		req<=0;
+		oRdclk<=0;
+endcase
+end
+
+always@(posedge clk)begin
+case (state)
+	S3:
+		oNewData<=1;
+	default:
+		oNewData<=0;
 endcase
 end
 

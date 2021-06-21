@@ -42,18 +42,18 @@ module mx2to1 (
 	sel,
 	result);
 
-	input	[11:0]  data0x;
-	input	[11:0]  data1x;
+	input	[15:0]  data0x;
+	input	[15:0]  data1x;
 	input	  sel;
-	output	[11:0]  result;
+	output	[15:0]  result;
 
-	wire [11:0] sub_wire0;
-	wire [11:0] sub_wire5 = data1x[11:0];
-	wire [11:0] result = sub_wire0[11:0];
+	wire [15:0] sub_wire0;
+	wire [15:0] sub_wire5 = data1x[15:0];
+	wire [15:0] result = sub_wire0[15:0];
 	wire  sub_wire1 = sel;
 	wire  sub_wire2 = sub_wire1;
-	wire [11:0] sub_wire3 = data0x[11:0];
-	wire [23:0] sub_wire4 = {sub_wire5, sub_wire3};
+	wire [15:0] sub_wire3 = data0x[15:0];
+	wire [31:0] sub_wire4 = {sub_wire5, sub_wire3};
 
 	lpm_mux	lpm_mux_component (
 				.sel (sub_wire2),
@@ -69,7 +69,7 @@ module mx2to1 (
 	defparam
 		lpm_mux_component.lpm_size = 2,
 		lpm_mux_component.lpm_type = "LPM_MUX",
-		lpm_mux_component.lpm_width = 12,
+		lpm_mux_component.lpm_width = 16,
 		lpm_mux_component.lpm_widths = 1;
 
 
@@ -82,15 +82,15 @@ endmodule
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 // Retrieval info: CONSTANT: LPM_SIZE NUMERIC "2"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_MUX"
-// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "12"
+// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "16"
 // Retrieval info: CONSTANT: LPM_WIDTHS NUMERIC "1"
-// Retrieval info: USED_PORT: data0x 0 0 12 0 INPUT NODEFVAL data0x[11..0]
-// Retrieval info: USED_PORT: data1x 0 0 12 0 INPUT NODEFVAL data1x[11..0]
-// Retrieval info: USED_PORT: result 0 0 12 0 OUTPUT NODEFVAL result[11..0]
+// Retrieval info: USED_PORT: data0x 0 0 16 0 INPUT NODEFVAL data0x[15..0]
+// Retrieval info: USED_PORT: data1x 0 0 16 0 INPUT NODEFVAL data1x[15..0]
+// Retrieval info: USED_PORT: result 0 0 16 0 OUTPUT NODEFVAL result[15..0]
 // Retrieval info: USED_PORT: sel 0 0 0 0 INPUT NODEFVAL sel
-// Retrieval info: CONNECT: result 0 0 12 0 @result 0 0 12 0
-// Retrieval info: CONNECT: @data 0 0 12 12 data1x 0 0 12 0
-// Retrieval info: CONNECT: @data 0 0 12 0 data0x 0 0 12 0
+// Retrieval info: CONNECT: result 0 0 16 0 @result 0 0 16 0
+// Retrieval info: CONNECT: @data 0 0 16 16 data1x 0 0 16 0
+// Retrieval info: CONNECT: @data 0 0 16 0 data0x 0 0 16 0
 // Retrieval info: CONNECT: @sel 0 0 1 0 sel 0 0 0 0
 // Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 // Retrieval info: GEN_FILE: TYPE_NORMAL mx2to1.v TRUE

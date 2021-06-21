@@ -28,8 +28,8 @@ function [y] = fft32_model(x,nps,inverse)
 addpath('c:/altera/90/ip/altera/fft/lib//ip_toolbench//../');
 % Parameterization Space. 
 N=32;
-DATA_PREC=12;
-TWIDDLE_PREC=12;
+DATA_PREC=16;
+TWIDDLE_PREC=16;
 % Input is in natural order                                                           
 INPUT_ORDER=1;  
 % Output is in natural order                                                           

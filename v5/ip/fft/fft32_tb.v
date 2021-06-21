@@ -29,8 +29,8 @@ module fft32_tb;
    reg clk;    
    reg reset_n;
    reg sink_valid;
-   reg[12 - 1:0] sink_real;
-   reg[12 - 1:0] sink_imag;
+   reg[16 - 1:0] sink_real;
+   reg[16 - 1:0] sink_imag;
    wire [5:0]    fftpts_in;
    wire [5:0]    fftpts_out;
    wire 		inverse;
@@ -45,11 +45,11 @@ module fft32_tb;
    wire 		source_eop;
    wire 		source_valid;
    wire [1:0]           source_error;
-   wire [19 - 1: 0] source_real;
-   wire [19 - 1: 0] source_imag;
+   wire [23 - 1: 0] source_real;
+   wire [23 - 1: 0] source_imag;
    parameter 		       NUM_FRAMES_c = 4;
-   parameter 		       MAXVAL_c = 2**(19 -1);
-   parameter 		       OFFSET_c = 2**(19);
+   parameter 		       MAXVAL_c = 2**(23 -1);
+   parameter 		       OFFSET_c = 2**(23);
    integer  fftpts_array[NUM_FRAMES_c-1:0];
    
    
@@ -213,8 +213,8 @@ initial
      begin
 	if(reset_n==1'b0)
           begin
-	     sink_real<=12'b0;
-	     sink_imag<=12'b0;
+	     sink_real<=16'b0;
+	     sink_imag<=16'b0;
 	     sink_valid <= 1'b0;
 	  end
 	else
@@ -222,8 +222,8 @@ initial
             // send in NUM_FRAMES_c of data or until the end of the file
 	     if((end_test == 1'b1) || (end_input == 1'b1))
 	       begin
-		  sink_real<=12'b0;
-		  sink_imag<=12'b0;
+		  sink_real<=16'b0;
+		  sink_imag<=16'b0;
 		  sink_valid <= 1'b0;
 	       end
 	     else

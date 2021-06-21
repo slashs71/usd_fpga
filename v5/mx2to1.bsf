@@ -26,15 +26,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 40)
 		(input)
-		(text "data1x[11..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
-		(text "data1x[11..0]" (rect 4 27 66 40)(font "Arial" (font_size 8)))
+		(text "data1x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data1x[15..0]" (rect 4 27 66 40)(font "Arial" (font_size 8)))
 		(line (pt 0 40)(pt 72 40)(line_width 3))
 	)
 	(port
 		(pt 0 56)
 		(input)
-		(text "data0x[11..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
-		(text "data0x[11..0]" (rect 4 43 66 56)(font "Arial" (font_size 8)))
+		(text "data0x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data0x[15..0]" (rect 4 43 66 56)(font "Arial" (font_size 8)))
 		(line (pt 0 56)(pt 72 56)(line_width 3))
 	)
 	(port
@@ -47,8 +47,8 @@ applicable agreement for further details.
 	(port
 		(pt 152 48)
 		(output)
-		(text "result[11..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
-		(text "result[11..0]" (rect 92 35 147 48)(font "Arial" (font_size 8)))
+		(text "result[15..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "result[15..0]" (rect 92 35 147 48)(font "Arial" (font_size 8)))
 		(line (pt 152 48)(pt 88 48)(line_width 3))
 	)
 	(drawing

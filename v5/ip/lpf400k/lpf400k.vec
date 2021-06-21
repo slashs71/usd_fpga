@@ -1,6 +1,6 @@
 % units default to ns %
 START 0 ;
-STOP 1445 ;
+STOP 1245 ;
 INTERVAL 5 ;
 INPUTS clk ;
 PATTERN

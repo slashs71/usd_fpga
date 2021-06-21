@@ -59,8 +59,8 @@ module fft32 (
 	input		sink_valid;
 	input		sink_sop;
 	input		sink_eop;
-	input	[11:0]	sink_real;
-	input	[11:0]	sink_imag;
+	input	[15:0]	sink_real;
+	input	[15:0]	sink_imag;
 	input	[1:0]	sink_error;
 	input		source_ready;
 	output	[5:0]	fftpts_out;
@@ -69,8 +69,8 @@ module fft32 (
 	output		source_sop;
 	output		source_eop;
 	output		source_valid;
-	output	[18:0]	source_real;
-	output	[18:0]	source_imag;
+	output	[22:0]	source_real;
+	output	[22:0]	source_imag;
 
 
 	auk_dspip_r22sdf_top_fft_90	auk_dspip_r22sdf_top_fft_90_inst(
@@ -97,8 +97,8 @@ module fft32 (
 	defparam
 		auk_dspip_r22sdf_top_fft_90_inst.MAX_FFTPTS_g = 32,
 		auk_dspip_r22sdf_top_fft_90_inst.NUM_STAGES_g = 3,
-		auk_dspip_r22sdf_top_fft_90_inst.DATAWIDTH_g = 12,
-		auk_dspip_r22sdf_top_fft_90_inst.TWIDWIDTH_g = 12,
+		auk_dspip_r22sdf_top_fft_90_inst.DATAWIDTH_g = 16,
+		auk_dspip_r22sdf_top_fft_90_inst.TWIDWIDTH_g = 16,
 		auk_dspip_r22sdf_top_fft_90_inst.MAX_GROW_g = 7,
 		auk_dspip_r22sdf_top_fft_90_inst.TWIDROM_BASE_g = "fft32_",
 		auk_dspip_r22sdf_top_fft_90_inst.DSP_ROUNDING_g = 0,
@@ -125,8 +125,8 @@ endmodule
 // Retrieval info:      <PRIVATE name = "mem_type" value="M512"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "DEVICE" value="Cyclone III"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NPS" value="32"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "MPR" value="12"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "TWR" value="12"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "MPR" value="16"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "TWR" value="16"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "ARCH" value="3"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NUME" value="1"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "ENGINE_THROUGHPUT" value="4"  type="INTEGER"  enable="1" />
@@ -140,7 +140,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "NUM_M4K" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NUM_MEGA" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NUM_M512" value="0"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "NUM_DSP" value="16"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "NUM_DSP" value="24"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NUM_CALC_CYCLES" value="32"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NUM_BLK_THROUGHPUT_CYCLES" value="32"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "rfs1" value="romfile_1024.hex"  type="STRING"  enable="1" />
@@ -150,7 +150,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "rfc2" value="romfile_1024.hex"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "rfc3" value="romfile_1024.hex"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "ENA" value="0"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "NUM_MEMBITS" value="2260"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "NUM_MEMBITS" value="2804"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "INPUT_ORDER" value="1"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "OUTPUT_ORDER" value="1"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "REPRESENTATION" value="0"  type="INTEGER"  enable="1" />

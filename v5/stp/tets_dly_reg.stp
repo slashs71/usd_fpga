@@ -1,0 +1,323 @@
+<session sof_file="" top_level_entity="usd_cyclone3">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="lock mode" value="36110"/>
+    <multi attribute="window position" size="9" value="1920,937,398,124,577,50,124,0,50"/>
+  </global_info>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2021/06/21 15:20:39  #0">
+      <clock name="fdiv10:inst58|oclk" polarity="posedge" tap_mode="probeonly"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="128" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="dly_reg:inst77|iData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[9]" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="dly_reg:inst77|iData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[9]" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="dly_reg:inst77|iData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|iData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst78|oData[9]" tap_mode="classic" type="combinatorial"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst77|iData" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst77|oData" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst78|iData" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst78|oData" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[11]"/>
+          </bus>
+        </data_view>
+        <setup_view>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst77|iData" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst77|oData" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst78|iData" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|iData[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst78|oData" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst78|oData[11]"/>
+          </bus>
+        </setup_view>
+      </presentation>
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2021/06/21 15:20:39  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>000000000000000000000000000000000000000000000000
+            <pwr_up_transitional>000000000000000000000000000000000000000000000000
+            </pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+</session>

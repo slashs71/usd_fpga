@@ -50,8 +50,8 @@ module fft32 (
 	input		sink_valid;
 	input		sink_sop;
 	input		sink_eop;
-	input	[11:0]	sink_real;
-	input	[11:0]	sink_imag;
+	input	[15:0]	sink_real;
+	input	[15:0]	sink_imag;
 	input	[1:0]	sink_error;
 	input		source_ready;
 	output	[5:0]	fftpts_out;
@@ -60,6 +60,6 @@ module fft32 (
 	output		source_sop;
 	output		source_eop;
 	output		source_valid;
-	output	[18:0]	source_real;
-	output	[18:0]	source_imag;
+	output	[22:0]	source_real;
+	output	[22:0]	source_imag;
 endmodule

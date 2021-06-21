@@ -21,10 +21,10 @@
 // ================================================================================
 //
 #define FFT_NAME fft32_fft
-#define IN_DW 12
-#define OUT_DW 19  
+#define IN_DW 16
+#define OUT_DW 23  
 #define FFTPTS_SIZE (5 + 1)
-#define TWIDW 12
+#define TWIDW 16
 #define ROUNDING_TYPE 1
 #define OUTPUT_ORDER 1
 #define INPUT_ORDER 1

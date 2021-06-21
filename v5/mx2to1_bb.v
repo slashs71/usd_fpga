@@ -37,10 +37,10 @@ module mx2to1 (
 	sel,
 	result);
 
-	input	[11:0]  data0x;
-	input	[11:0]  data1x;
+	input	[15:0]  data0x;
+	input	[15:0]  data1x;
 	input	  sel;
-	output	[11:0]  result;
+	output	[15:0]  result;
 
 endmodule
 
@@ -51,15 +51,15 @@ endmodule
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 // Retrieval info: CONSTANT: LPM_SIZE NUMERIC "2"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_MUX"
-// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "12"
+// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "16"
 // Retrieval info: CONSTANT: LPM_WIDTHS NUMERIC "1"
-// Retrieval info: USED_PORT: data0x 0 0 12 0 INPUT NODEFVAL data0x[11..0]
-// Retrieval info: USED_PORT: data1x 0 0 12 0 INPUT NODEFVAL data1x[11..0]
-// Retrieval info: USED_PORT: result 0 0 12 0 OUTPUT NODEFVAL result[11..0]
+// Retrieval info: USED_PORT: data0x 0 0 16 0 INPUT NODEFVAL data0x[15..0]
+// Retrieval info: USED_PORT: data1x 0 0 16 0 INPUT NODEFVAL data1x[15..0]
+// Retrieval info: USED_PORT: result 0 0 16 0 OUTPUT NODEFVAL result[15..0]
 // Retrieval info: USED_PORT: sel 0 0 0 0 INPUT NODEFVAL sel
-// Retrieval info: CONNECT: result 0 0 12 0 @result 0 0 12 0
-// Retrieval info: CONNECT: @data 0 0 12 12 data1x 0 0 12 0
-// Retrieval info: CONNECT: @data 0 0 12 0 data0x 0 0 12 0
+// Retrieval info: CONNECT: result 0 0 16 0 @result 0 0 16 0
+// Retrieval info: CONNECT: @data 0 0 16 16 data1x 0 0 16 0
+// Retrieval info: CONNECT: @data 0 0 16 0 data0x 0 0 16 0
 // Retrieval info: CONNECT: @sel 0 0 1 0 sel 0 0 0 0
 // Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 // Retrieval info: GEN_FILE: TYPE_NORMAL mx2to1.v TRUE

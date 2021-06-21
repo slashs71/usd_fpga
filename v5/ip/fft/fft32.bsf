@@ -75,15 +75,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 144)
 		(input)
-		(text "sink_real[11..0]" (rect 0 0 75 12)(font "Arial" ))
-		(text "sink_real[11..0]" (rect 21 139 96 151)(font "Arial" ))
+		(text "sink_real[15..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "sink_real[15..0]" (rect 21 139 96 151)(font "Arial" ))
 		(line (pt 0 144)(pt 16 144)(line_width 3))
 	)
 	(port
 		(pt 0 160)
 		(input)
-		(text "sink_imag[11..0]" (rect 0 0 81 12)(font "Arial" ))
-		(text "sink_imag[11..0]" (rect 21 155 102 167)(font "Arial" ))
+		(text "sink_imag[15..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "sink_imag[15..0]" (rect 21 155 102 167)(font "Arial" ))
 		(line (pt 0 160)(pt 16 160)(line_width 3))
 	)
 	(port
@@ -145,15 +145,15 @@ applicable agreement for further details.
 	(port
 		(pt 232 128)
 		(output)
-		(text "source_real[18..0]" (rect 0 0 88 12)(font "Arial" ))
-		(text "source_real[18..0]" (rect 123 123 211 135)(font "Arial" ))
+		(text "source_real[22..0]" (rect 0 0 88 12)(font "Arial" ))
+		(text "source_real[22..0]" (rect 123 123 211 135)(font "Arial" ))
 		(line (pt 232 128)(pt 216 128)(line_width 3))
 	)
 	(port
 		(pt 232 144)
 		(output)
-		(text "source_imag[18..0]" (rect 0 0 94 12)(font "Arial" ))
-		(text "source_imag[18..0]" (rect 117 139 211 151)(font "Arial" ))
+		(text "source_imag[22..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "source_imag[22..0]" (rect 117 139 211 151)(font "Arial" ))
 		(line (pt 232 144)(pt 216 144)(line_width 3))
 	)
 	(drawing

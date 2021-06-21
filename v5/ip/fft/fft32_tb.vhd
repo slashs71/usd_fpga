@@ -41,16 +41,16 @@ architecture tb of fft32_tb is
   signal sink_sop     : std_logic;
   signal sink_eop     : std_logic;
   signal sink_error   : std_logic_vector(1 downto 0);
-  signal sink_real    : std_logic_vector (12 - 1 downto 0);
-  signal sink_imag    : std_logic_vector (12 - 1 downto 0);
+  signal sink_real    : std_logic_vector (16 - 1 downto 0);
+  signal sink_imag    : std_logic_vector (16 - 1 downto 0);
   signal source_ready : std_logic;
   signal sink_ready   : std_logic;
   signal source_sop   : std_logic;
   signal source_eop   : std_logic;
   signal source_valid : std_logic;
   signal source_error : std_logic_vector(1 downto 0);
-  signal source_real : std_logic_vector (19 - 1 downto 0);
-  signal source_imag : std_logic_vector (19 - 1 downto 0);
+  signal source_real : std_logic_vector (23 - 1 downto 0);
+  signal source_imag : std_logic_vector (23 - 1 downto 0);
   
   constant NUM_FRAMES_c : natural := 4;
   -- for testing purposes, the input file contains 2 frames of data of sizes
@@ -81,8 +81,8 @@ architecture tb of fft32_tb is
       sink_valid   : in  std_logic;
       sink_sop     : in  std_logic;
       sink_eop     : in  std_logic;
-      sink_real    : in  std_logic_vector (12 - 1 downto 0);
-      sink_imag    : in  std_logic_vector (12 - 1 downto 0);
+      sink_real    : in  std_logic_vector (16 - 1 downto 0);
+      sink_imag    : in  std_logic_vector (16 - 1 downto 0);
       source_ready : in  std_logic;
       sink_ready   : out std_logic;
       sink_error   : in  std_logic_vector(1 downto 0);
@@ -90,8 +90,8 @@ architecture tb of fft32_tb is
       source_sop   : out std_logic;
       source_eop   : out std_logic;
       source_valid : out std_logic;
-      source_real  : out std_logic_vector (19 - 1 downto 0);
-      source_imag  : out std_logic_vector (19 - 1 downto 0)
+      source_real  : out std_logic_vector (23 - 1 downto 0);
+      source_imag  : out std_logic_vector (23 - 1 downto 0)
       ); 
   end component fft32;
   
@@ -229,8 +229,8 @@ begin
     variable data_i : integer;
   begin
     if(reset_n = '0') then
-      sink_real  <= std_logic_vector(to_signed(0, 12));
-      sink_imag  <= std_logic_vector(to_signed(0, 12));
+      sink_real  <= std_logic_vector(to_signed(0, 16));
+      sink_imag  <= std_logic_vector(to_signed(0, 16));
       sink_valid <= '0';
     elsif rising_edge(clk) then
 
@@ -243,8 +243,8 @@ begin
           readline(i_file, idata);
           read(idata, data_i);
           sink_valid <= '1';
-          sink_real  <= std_logic_vector(to_signed(data_r, 12));
-          sink_imag  <= std_logic_vector(to_signed(data_i, 12));
+          sink_real  <= std_logic_vector(to_signed(data_r, 16));
+          sink_imag  <= std_logic_vector(to_signed(data_i, 16));
         else
           sink_valid <= '1';
           sink_real  <= sink_real;
@@ -252,8 +252,8 @@ begin
         end if;
       else
         sink_valid <= '0';
-        sink_real <= std_logic_vector(to_signed(0, 12));
-        sink_imag <= std_logic_vector(to_signed(0, 12));
+        sink_real <= std_logic_vector(to_signed(0, 16));
+        sink_imag <= std_logic_vector(to_signed(0, 16));
       end if;
     end if;
     

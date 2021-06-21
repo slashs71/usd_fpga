@@ -86,7 +86,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "filter_rate" value="Single Rate"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "filter_factor" value="2"  type="INTEGER"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficient_scaling_type" value="Auto"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "coefficient_scaling_factor" value="3386.675615864136"  type="STRING"  enable="0" />
+// Retrieval info:      <PRIVATE name = "coefficient_scaling_factor" value="3386.6665320926295"  type="STRING"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficient_bit_width" value="8"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "coefficient_binary_point_position" value="0"  type="INTEGER"  enable="0" />
 // Retrieval info:      <PRIVATE name = "number_of_input_channels" value="1"  type="INTEGER"  enable="1" />
@@ -97,7 +97,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "output_number_system" value="Custom Resolution"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_bit_width" value="12"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_bits_right_of_binary_point" value="12"  type="INTEGER"  enable="0" />
-// Retrieval info:      <PRIVATE name = "output_bits_removed_from_lsb" value="10"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "output_bits_removed_from_lsb" value="8"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_lsb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_msb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "flow_control" value="0"  type="INTEGER"  enable="1" />
@@ -115,12 +115,12 @@ endmodule
 // Retrieval info:      <PRIVATE name = "coefficients_reload" value="0"  type="BOOLEAN"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficients_reload_sgl_clock" value="0"  type="BOOLEAN"  enable="1" />
 // Retrieval info:      <PRIVATE name = "max_clocks_to_compute" value="4"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "set_1" value="Low Pass Set, Floating, Low Pass, Hanning, 27, 8000000.0, 150000.0, 3750000.0, 0, 3.06711E-4, 0.00129726, 0.00303807, 0.00553618, 0.00873463, 0.0125134, 0.0166958, 0.0210605, 0.0253572, 0.0293261, 0.032718, 0.0353141, 0.0369442, 0.0374999, 0.0369442, 0.0353141, 0.032718, 0.0293261, 0.0253572, 0.0210605, 0.0166958, 0.0125134, 0.00873463, 0.00553618, 0.00303807, 0.00129726, 3.06711E-4"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "set_1" value="Low Pass Set, Floating, Low Pass, Hanning, 7, 8000000.0, 150000.0, 3750000.0, 0, 0.00537813, 0.018577, 0.0319343, 0.0375, 0.0319343, 0.018577, 0.00537813"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "number_of_sets" value="1"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "output_full_bit_width" value="23"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "output_full_bit_width" value="21"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_full_bits_right_of_binary_point" value="18"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "coefficient_reload_bit_width" value="19"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "logic_cell" value="1308"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "coefficient_reload_bit_width" value="11"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "logic_cell" value="505"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m512" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m4k" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m144k" value="0"  type="INTEGER"  enable="1" />

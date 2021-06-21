@@ -13,13 +13,13 @@
 --applicable agreement for further details.
 
 
-FUNCTION lpm_mult0 
+FUNCTION sum 
 (
 	clock,
-	dataa[15..0],
+	dataa[11..0],
 	datab[11..0]
 )
 
 RETURNS (
-	result[27..0]
+	result[11..0]
 );

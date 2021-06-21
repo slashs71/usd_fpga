@@ -1,12 +1,12 @@
-// megafunction wizard: %LPM_MULT%VBB%
+// megafunction wizard: %LPM_ADD_SUB%VBB%
 // GENERATION: STANDARD
 // VERSION: WM1.0
-// MODULE: lpm_mult 
+// MODULE: lpm_add_sub 
 
 // ============================================================
-// File Name: lpm_mult0.v
+// File Name: sum.v
 // Megafunction Name(s):
-// 			lpm_mult
+// 			lpm_add_sub
 //
 // Simulation Library Files(s):
 // 			lpm
@@ -31,60 +31,62 @@
 //Altera or its authorized distributors.  Please refer to the 
 //applicable agreement for further details.
 
-module lpm_mult0 (
+module sum (
 	clock,
 	dataa,
 	datab,
 	result);
 
 	input	  clock;
-	input	[15:0]  dataa;
+	input	[11:0]  dataa;
 	input	[11:0]  datab;
-	output	[27:0]  result;
+	output	[11:0]  result;
 
 endmodule
 
 // ============================================================
 // CNX file retrieval info
 // ============================================================
-// Retrieval info: PRIVATE: AutoSizeResult NUMERIC "1"
-// Retrieval info: PRIVATE: B_isConstant NUMERIC "0"
+// Retrieval info: PRIVATE: CarryIn NUMERIC "0"
+// Retrieval info: PRIVATE: CarryOut NUMERIC "0"
+// Retrieval info: PRIVATE: ConstantA NUMERIC "0"
 // Retrieval info: PRIVATE: ConstantB NUMERIC "0"
+// Retrieval info: PRIVATE: Function NUMERIC "0"
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
-// Retrieval info: PRIVATE: LPM_PIPELINE NUMERIC "2"
+// Retrieval info: PRIVATE: LPM_PIPELINE NUMERIC "1"
 // Retrieval info: PRIVATE: Latency NUMERIC "1"
+// Retrieval info: PRIVATE: Overflow NUMERIC "0"
+// Retrieval info: PRIVATE: RadixA NUMERIC "10"
+// Retrieval info: PRIVATE: RadixB NUMERIC "10"
+// Retrieval info: PRIVATE: Representation NUMERIC "0"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
-// Retrieval info: PRIVATE: SignedMult NUMERIC "1"
-// Retrieval info: PRIVATE: USE_MULT NUMERIC "1"
-// Retrieval info: PRIVATE: ValidConstant NUMERIC "0"
-// Retrieval info: PRIVATE: WidthA NUMERIC "16"
-// Retrieval info: PRIVATE: WidthB NUMERIC "12"
-// Retrieval info: PRIVATE: WidthP NUMERIC "28"
+// Retrieval info: PRIVATE: ValidCtA NUMERIC "0"
+// Retrieval info: PRIVATE: ValidCtB NUMERIC "0"
+// Retrieval info: PRIVATE: WhichConstant NUMERIC "0"
 // Retrieval info: PRIVATE: aclr NUMERIC "0"
 // Retrieval info: PRIVATE: clken NUMERIC "0"
-// Retrieval info: PRIVATE: optimize NUMERIC "1"
-// Retrieval info: CONSTANT: LPM_HINT STRING "MAXIMIZE_SPEED=9"
-// Retrieval info: CONSTANT: LPM_PIPELINE NUMERIC "2"
+// Retrieval info: PRIVATE: nBit NUMERIC "12"
+// Retrieval info: CONSTANT: LPM_DIRECTION STRING "ADD"
+// Retrieval info: CONSTANT: LPM_HINT STRING "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+// Retrieval info: CONSTANT: LPM_PIPELINE NUMERIC "1"
 // Retrieval info: CONSTANT: LPM_REPRESENTATION STRING "SIGNED"
-// Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_MULT"
-// Retrieval info: CONSTANT: LPM_WIDTHA NUMERIC "16"
-// Retrieval info: CONSTANT: LPM_WIDTHB NUMERIC "12"
-// Retrieval info: CONSTANT: LPM_WIDTHP NUMERIC "28"
+// Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_ADD_SUB"
+// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "12"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL clock
-// Retrieval info: USED_PORT: dataa 0 0 16 0 INPUT NODEFVAL dataa[15..0]
+// Retrieval info: USED_PORT: dataa 0 0 12 0 INPUT NODEFVAL dataa[11..0]
 // Retrieval info: USED_PORT: datab 0 0 12 0 INPUT NODEFVAL datab[11..0]
-// Retrieval info: USED_PORT: result 0 0 28 0 OUTPUT NODEFVAL result[27..0]
-// Retrieval info: CONNECT: @dataa 0 0 16 0 dataa 0 0 16 0
-// Retrieval info: CONNECT: result 0 0 28 0 @result 0 0 28 0
+// Retrieval info: USED_PORT: result 0 0 12 0 OUTPUT NODEFVAL result[11..0]
+// Retrieval info: CONNECT: result 0 0 12 0 @result 0 0 12 0
+// Retrieval info: CONNECT: @dataa 0 0 12 0 dataa 0 0 12 0
 // Retrieval info: CONNECT: @datab 0 0 12 0 datab 0 0 12 0
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: LIBRARY: lpm lpm.lpm_components.all
-// Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mult0.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mult0.inc TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mult0.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mult0.bsf TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mult0_inst.v FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mult0_bb.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mult0_waveforms.html TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mult0_wave*.jpg FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL sum.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL sum.inc TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL sum.cmp FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL sum.bsf TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL sum_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL sum_bb.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL sum_waveforms.html TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL sum_wave*.jpg FALSE
 // Retrieval info: LIB_FILE: lpm

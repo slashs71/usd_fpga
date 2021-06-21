@@ -1,0 +1,209 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP3C16 (0x020F20DD)" sof_file="../usd_cyclone3.sof" top_level_entity="usd_cyclone3">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2021/06/21 15:36:04  #0">
+      <clock name="fdiv10:inst58|oclk" polarity="posedge" tap_mode="probeonly"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="64" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="dly_reg:inst77|iData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[9]" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="dly_reg:inst77|iData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[9]" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="dly_reg:inst77|iData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|iData[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="dly_reg:inst77|oData[9]" tap_mode="classic" type="combinatorial"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst77|iData" order="lsb_to_msb" radix="line_signed" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst77|oData" order="lsb_to_msb" radix="line_signed" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[11]"/>
+          </bus>
+        </data_view>
+        <setup_view>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst77|iData" order="lsb_to_msb" radix="line_signed" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|iData[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="dly_reg:inst77|oData" order="lsb_to_msb" radix="line_signed" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[0]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[1]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[2]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[3]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[4]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[5]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[6]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[7]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[8]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[9]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[10]"/>
+            <net is_signal_inverted="no" name="dly_reg:inst77|oData[11]"/>
+          </bus>
+        </setup_view>
+      </presentation>
+      <trigger CRC="CC3828B0" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2021/06/21 15:36:04  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>000000000000000000000000
+            
+            <pwr_up_transitional>000000000000000000000000
+            
+            </pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+        <log>
+          <data global_temp="1" name="log: 2021/06/21 15:40:20  #0" power_up_mode="false" sample_depth="63" trigger_position="8">101011111001101110000000100100110000101011111001110010001110100100110000110001111111110010001110110100000110110001111111111011001111110100000110101101110001111011001111101110000000101101110001101011111001101110000000100100110000101011111001110010001110100100110000110001111111110010001110110100000110110001111111111011001111110100000110101101110001111011001111101110000000101101110001101011111001101110000000100100110000101011111001110010001110100100110000110001111111110010001110110100000110110001111111111011001111110100000110101101110001111011001111101110000000101101110001101011111001101110000000100100110000101011111001110010001110100100110000110001111111110010001110110100000110110001111111111011001111110100000110101101110001111011001111101110000000101101110001101011111001101110000000100100110000101011111001110010001110100100110000110001111111110010001110110100000110110001111111111011001111110100000110101101110001111011001111101110000000101101110001101011111001101110000000100100110000101011111001110010001110100100110000110001111111110010001110110100000110110001111111111011001111110100000110101101110001111011001111101110000000101101110001101011111001101110000000100100110000101011111001110010001110100100110000110001111111110010001110110100000110110001111111111011001111110100000110101101110001111011001111101110000000101101110001101011111001101110000000100100110000101011111001110010001110100100110000110001111111110010001110110100000110110001111111111011001111110100000110101101110001111011001111110100000110110001111111</data>
+          <extradata>11111111T1111111111111111111111111111111111111111111111111111111</extradata>
+        </log>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="131008"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="lock mode" value="36110"/>
+    <single attribute="sof manager hidden" value="0"/>
+    <multi attribute="window position" size="9" value="1920,937,602,259,0,50,124,0,0"/>
+  </global_info>
+</session>
