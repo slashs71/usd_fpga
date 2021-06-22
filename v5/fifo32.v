@@ -45,7 +45,8 @@ module fifo32 (
 	q,
 	rdempty,
 	rdfull,
-	rdusedw);
+	rdusedw,
+	wrfull);
 
 	input	[11:0]  data;
 	input	  rdclk;
@@ -56,15 +57,18 @@ module fifo32 (
 	output	  rdempty;
 	output	  rdfull;
 	output	[4:0]  rdusedw;
+	output	  wrfull;
 
 	wire  sub_wire0;
 	wire  sub_wire1;
-	wire [11:0] sub_wire2;
-	wire [4:0] sub_wire3;
+	wire  sub_wire2;
+	wire [11:0] sub_wire3;
+	wire [4:0] sub_wire4;
 	wire  rdfull = sub_wire0;
 	wire  rdempty = sub_wire1;
-	wire [11:0] q = sub_wire2[11:0];
-	wire [4:0] rdusedw = sub_wire3[4:0];
+	wire  wrfull = sub_wire2;
+	wire [11:0] q = sub_wire3[11:0];
+	wire [4:0] rdusedw = sub_wire4[4:0];
 
 	dcfifo	dcfifo_component (
 				.wrclk (wrclk),
@@ -74,13 +78,13 @@ module fifo32 (
 				.data (data),
 				.rdfull (sub_wire0),
 				.rdempty (sub_wire1),
-				.q (sub_wire2),
-				.rdusedw (sub_wire3)
+				.wrfull (sub_wire2),
+				.q (sub_wire3),
+				.rdusedw (sub_wire4)
 				// synopsys translate_off
 				,
 				.aclr (),
 				.wrempty (),
-				.wrfull (),
 				.wrusedw ()
 				// synopsys translate_on
 				);
@@ -133,7 +137,7 @@ endmodule
 // Retrieval info: PRIVATE: sc_aclr NUMERIC "0"
 // Retrieval info: PRIVATE: sc_sclr NUMERIC "0"
 // Retrieval info: PRIVATE: wsEmpty NUMERIC "0"
-// Retrieval info: PRIVATE: wsFull NUMERIC "0"
+// Retrieval info: PRIVATE: wsFull NUMERIC "1"
 // Retrieval info: PRIVATE: wsUsedW NUMERIC "0"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
 // Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "32"
@@ -154,6 +158,7 @@ endmodule
 // Retrieval info: USED_PORT: rdreq 0 0 0 0 INPUT NODEFVAL rdreq
 // Retrieval info: USED_PORT: rdusedw 0 0 5 0 OUTPUT NODEFVAL rdusedw[4..0]
 // Retrieval info: USED_PORT: wrclk 0 0 0 0 INPUT NODEFVAL wrclk
+// Retrieval info: USED_PORT: wrfull 0 0 0 0 OUTPUT NODEFVAL wrfull
 // Retrieval info: USED_PORT: wrreq 0 0 0 0 INPUT NODEFVAL wrreq
 // Retrieval info: CONNECT: @data 0 0 12 0 data 0 0 12 0
 // Retrieval info: CONNECT: q 0 0 12 0 @q 0 0 12 0
@@ -164,6 +169,7 @@ endmodule
 // Retrieval info: CONNECT: rdfull 0 0 0 0 @rdfull 0 0 0 0
 // Retrieval info: CONNECT: rdempty 0 0 0 0 @rdempty 0 0 0 0
 // Retrieval info: CONNECT: rdusedw 0 0 5 0 @rdusedw 0 0 5 0
+// Retrieval info: CONNECT: wrfull 0 0 0 0 @wrfull 0 0 0 0
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: GEN_FILE: TYPE_NORMAL fifo32.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL fifo32.inc TRUE

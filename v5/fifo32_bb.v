@@ -40,7 +40,8 @@ module fifo32 (
 	q,
 	rdempty,
 	rdfull,
-	rdusedw);
+	rdusedw,
+	wrfull);
 
 	input	[11:0]  data;
 	input	  rdclk;
@@ -51,6 +52,7 @@ module fifo32 (
 	output	  rdempty;
 	output	  rdfull;
 	output	[4:0]  rdusedw;
+	output	  wrfull;
 
 endmodule
 
@@ -87,7 +89,7 @@ endmodule
 // Retrieval info: PRIVATE: sc_aclr NUMERIC "0"
 // Retrieval info: PRIVATE: sc_sclr NUMERIC "0"
 // Retrieval info: PRIVATE: wsEmpty NUMERIC "0"
-// Retrieval info: PRIVATE: wsFull NUMERIC "0"
+// Retrieval info: PRIVATE: wsFull NUMERIC "1"
 // Retrieval info: PRIVATE: wsUsedW NUMERIC "0"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
 // Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "32"
@@ -108,6 +110,7 @@ endmodule
 // Retrieval info: USED_PORT: rdreq 0 0 0 0 INPUT NODEFVAL rdreq
 // Retrieval info: USED_PORT: rdusedw 0 0 5 0 OUTPUT NODEFVAL rdusedw[4..0]
 // Retrieval info: USED_PORT: wrclk 0 0 0 0 INPUT NODEFVAL wrclk
+// Retrieval info: USED_PORT: wrfull 0 0 0 0 OUTPUT NODEFVAL wrfull
 // Retrieval info: USED_PORT: wrreq 0 0 0 0 INPUT NODEFVAL wrreq
 // Retrieval info: CONNECT: @data 0 0 12 0 data 0 0 12 0
 // Retrieval info: CONNECT: q 0 0 12 0 @q 0 0 12 0
@@ -118,6 +121,7 @@ endmodule
 // Retrieval info: CONNECT: rdfull 0 0 0 0 @rdfull 0 0 0 0
 // Retrieval info: CONNECT: rdempty 0 0 0 0 @rdempty 0 0 0 0
 // Retrieval info: CONNECT: rdusedw 0 0 5 0 @rdusedw 0 0 5 0
+// Retrieval info: CONNECT: wrfull 0 0 0 0 @wrfull 0 0 0 0
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: GEN_FILE: TYPE_NORMAL fifo32.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL fifo32.inc TRUE

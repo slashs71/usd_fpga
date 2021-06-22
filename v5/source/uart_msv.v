@@ -14,7 +14,7 @@ module uart_msv(
 );
 
 localparam baud=921600/2;
-localparam bit_tau=104; //50M
+localparam bit_tau=108; //50M
 localparam bit_mid=bit_tau/2;
 (* syn_encoding = "safe" *) reg [2:0] state;
 

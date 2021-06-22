@@ -4,17 +4,7 @@
   </display_tree>
   <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
-    <position_info>
-      <single attribute="active tab" value="1"/>
-      <single attribute="data horizontal scroll position" value="0"/>
-      <single attribute="data vertical scroll position" value="0"/>
-      <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="1"/>
-      <single attribute="zoom offset denominator" value="1"/>
-      <single attribute="zoom offset numerator" value="131008"/>
-      <multi attribute="timebars" size="2" value="71,103"/>
-    </position_info>
-    <signal_set global_temp="1" name="signal_set: 2021/06/21 17:27:56  #0">
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2021/06/21 17:27:56  #0">
       <clock name="fdiv10:inst58|oclk" polarity="posedge" tap_mode="classic"/>
       <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="64" trigger_in_enable="no" trigger_out_enable="no"/>
       <top_entity/>
@@ -180,7 +170,7 @@
           </bus>
           <net is_signal_inverted="no" name="fifo32:inst41|rdfull"/>
           <net is_signal_inverted="no" name="fifo32:inst41|rdempty"/>
-          <bus is_signal_inverted="no" link="all" name="fifo32:inst19|data" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+          <bus is_signal_inverted="no" link="all" name="fifo32:inst19|data" order="lsb_to_msb" radix="line_signed" state="collapse" type="combinatorial">
             <net is_signal_inverted="no" name="fifo32:inst19|data[0]"/>
             <net is_signal_inverted="no" name="fifo32:inst19|data[1]"/>
             <net is_signal_inverted="no" name="fifo32:inst19|data[2]"/>
@@ -228,7 +218,7 @@
           </bus>
           <net is_signal_inverted="no" name="fifo32:inst41|rdfull"/>
           <net is_signal_inverted="no" name="fifo32:inst41|rdempty"/>
-          <bus is_signal_inverted="no" link="all" name="fifo32:inst19|data" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+          <bus is_signal_inverted="no" link="all" name="fifo32:inst19|data" order="lsb_to_msb" radix="line_signed" state="collapse" type="combinatorial">
             <net is_signal_inverted="no" name="fifo32:inst19|data[0]"/>
             <net is_signal_inverted="no" name="fifo32:inst19|data[1]"/>
             <net is_signal_inverted="no" name="fifo32:inst19|data[2]"/>
@@ -244,7 +234,7 @@
           </bus>
         </setup_view>
       </presentation>
-      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2021/06/21 17:27:56  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+      <trigger CRC="6447C755" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2021/06/21 17:27:56  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
         <events use_custom_flow_control="no">
           <level enabled="yes" name="condition1" type="basic">
@@ -255,7 +245,9 @@
         </events>
         <storage_qualifier_events>
           <transitional>0000000000000000000000000000000000000000
+            
             <pwr_up_transitional>0000000000000000000000000000000000000000
+            
             </pwr_up_transitional>
           </transitional>
           <storage_qualifier_level type="basic">
@@ -275,11 +267,21 @@
           </storage_qualifier_level>
         </storage_qualifier_events>
         <log>
-          <data global_temp="1" name="log: 2021/06/21 17:27:56  #2"/>
-          <extradata/>
+          <data global_temp="1" name="log: 2021/06/22 08:31:51  #0" power_up_mode="false" sample_depth="63" trigger_position="8">1111010111000111101101100010001100000001111100001110000011101000000000000000000000001110100010001010001100000000000000001000101000110100011010000000000000000000010001101000100100000011000000000000000010010000001100011010000000000000000000000001101000000111100100100001110111111100011000010010011001010000001111111011110011111000000001111000101000111101001111001110001000100111011101110000010100000000011010001111100001010110001001111001000000000100100100010111000100100000110010001001010110111000011010100000000000001000100001101001000101100000000111011011110001101011111101110010101100011100010001000110101110100111111010111011111101001000111011000100011111101011101110110011100011110101001001111110101110100101010000001110010001110111111010110110001111010100100101100001000000000000001101110000000011011100000000000000000000100100011101001001000111010000000000000000000110000000000001100000000000000000000110110100100001101101001000000000000000111001010000001110010100001110101111110011101100101000011100001010111110111111000111010111110011100001111110001101000000100100000001000000001100010000110001000000000001010100000011010011100110100100001001010001100000010001000100010010000000011101111111000000110000001110101111010011111001110100011011101110011100001001000110010111010001110101001001110000010100111100000111101110100000010000010010000011110000011110111101001111000101110001001111000001111010001111011010001001101100111100000111010000010111010000111100010000000000000000000011110001011100110111000000000000000001110011011111101111010000000000000000001110111101001011101011110000000000000000101110101111011101000010000000000000000001110100001010000011000000011011111111001000110100000000111101010010000010000000100011001101000010001111001000100010000011000100000000011001100100100101101000001000000011010001100010000011100111111100100111110000011010011001000110101100110001100110011011110010000100011111000101001110000101001110000011010001111110110100111111100110011111101111001000100010000010010001000000000101100010100000110001001000011001010000010110001000000001001100000001000111000001011000100000010010010000000011010100000101100001111100010111001001010000000000000000000001110101110000011101011100000000000000001011100101110010111001011100000000000000011011111100000110111111000000000000000011100101111100111001011111000000000000001000011011010010000110110110010100000000000110101111001000000111111000111000000000000111010100100010101101100010000000001000100010000000010100100011101010011100011110101001000001100011010001111000110000001100010000</data>
+          <extradata>11111111T1111111111111111111111111111111111111111111111111111111</extradata>
         </log>
       </trigger>
     </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="131009"/>
+      <multi attribute="timebars" size="2" value="71,103"/>
+    </position_info>
   </instance>
   <mnemonics>
     <table name="state_table" width="5">
@@ -295,6 +297,6 @@
     <single attribute="active instance" value="0"/>
     <single attribute="lock mode" value="36110"/>
     <multi attribute="column width" size="23" value="34,34,234,74,68,70,136,88,98,98,88,88,195,101,101,101,101,101,101,101,101,107,78"/>
-    <multi attribute="window position" size="9" value="1920,937,506,219,484,50,124,0,0"/>
+    <multi attribute="window position" size="9" value="1920,937,506,219,356,50,124,0,0"/>
   </global_info>
 </session>

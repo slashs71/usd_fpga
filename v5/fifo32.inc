@@ -26,5 +26,6 @@ RETURNS (
 	q[11..0],
 	rdempty,
 	rdfull,
-	rdusedw[4..0]
+	rdusedw[4..0],
+	wrfull
 );
