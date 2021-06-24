@@ -142,8 +142,6 @@ set_global_assignment -name SIGNALTAP_FILE test_send_data.stp
 set_global_assignment -name VERILOG_FILE source/sub_const.v
 set_global_assignment -name SIGNALTAP_FILE stp/test_fft1.stp
 set_global_assignment -name SIGNALTAP_FILE stp/test_lpf8.stp
-set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
-set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
 set_global_assignment -name SEARCH_PATH ip/nco/.
 set_global_assignment -name SEARCH_PATH "ip/nco/nco-library"
 set_global_assignment -name SEARCH_PATH ip/lpf400k/.
@@ -160,3 +158,17 @@ set_global_assignment -name SEARCH_PATH ip/./
 set_global_assignment -name SEARCH_PATH "ip/nco-library/"
 set_global_assignment -name SEARCH_PATH .
 set_global_assignment -name SEARCH_PATH "fft-library"
+set_global_assignment -name QIP_FILE ip/counter/cntr.qip
+set_location_assignment PIN_AA8 -to Dout[11]
+set_location_assignment PIN_AB8 -to Dout[10]
+set_location_assignment PIN_AA10 -to Dout[9]
+set_location_assignment PIN_AB10 -to Dout[8]
+set_location_assignment PIN_AA13 -to Dout[7]
+set_location_assignment PIN_AB13 -to Dout[6]
+set_location_assignment PIN_AB14 -to Dout[5]
+set_location_assignment PIN_AA14 -to Dout[4]
+set_location_assignment PIN_AB15 -to Dout[3]
+set_location_assignment PIN_AA15 -to Dout[2]
+set_location_assignment PIN_AA16 -to Dout[1]
+set_location_assignment PIN_AB16 -to Dout[0]
+set_location_assignment PIN_AB3 -to F10out

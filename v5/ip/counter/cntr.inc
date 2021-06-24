@@ -13,13 +13,11 @@
 --applicable agreement for further details.
 
 
-FUNCTION pll 
+FUNCTION cntr 
 (
-	inclk0
+	clock
 )
 
 RETURNS (
-	c0,
-	c1,
-	c2
+	q[11..0]
 );
