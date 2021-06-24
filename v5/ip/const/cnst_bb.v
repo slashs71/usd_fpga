@@ -42,14 +42,14 @@ endmodule
 // CNX file retrieval info
 // ============================================================
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
-// Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
-// Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
+// Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "1"
+// Retrieval info: PRIVATE: JTAG_ID STRING "Phi"
 // Retrieval info: PRIVATE: Radix NUMERIC "10"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 // Retrieval info: PRIVATE: Value NUMERIC "1073876042"
 // Retrieval info: PRIVATE: nBit NUMERIC "32"
 // Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "1073876042"
-// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
+// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=Phi"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_CONSTANT"
 // Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "32"
 // Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL result[31..0]

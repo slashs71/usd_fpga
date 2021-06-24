@@ -10,11 +10,7 @@ localparam d=10;
 
 always@(posedge clk)
 begin
-	if (iData>d)
-		oData<= iData - d;
-	
-	if (iData<-d)
-		oData<= oData + d;
+	oData <= iData/5*4;
 end
 
 endmodule 

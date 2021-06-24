@@ -33,25 +33,38 @@
 //applicable agreement for further details.
 
 
-//lpm_constant CBX_AUTO_BLACKBOX="ALL" ENABLE_RUNTIME_MOD="NO" LPM_CVALUE=40020C4A LPM_WIDTH=32 result
+//lpm_constant CBX_AUTO_BLACKBOX="ALL" ENABLE_RUNTIME_MOD="YES" INSTANCE_NAME="Phi" LPM_CVALUE=40020C4A LPM_WIDTH=32 result
 //VERSION_BEGIN 9.0 cbx_lpm_constant 2008:10:27:14:59:22:SJ cbx_mgl 2009:01:29:16:12:07:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
 
 
-//synthesis_resources = 
+//synthesis_resources = sld_mod_ram_rom 1 
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  cnst_lpm_constant_949
+module  cnst_lpm_constant_k1b
 	( 
 	result) ;
 	output   [31:0]  result;
 
+	wire  [31:0]   wire_mgl_prim1_data_write;
 
+	sld_mod_ram_rom   mgl_prim1
+	( 
+	.data_write(wire_mgl_prim1_data_write));
+	defparam
+		mgl_prim1.cvalue = 32'h40020C4A,
+		mgl_prim1.is_data_in_ram = 0,
+		mgl_prim1.is_readable = 0,
+		mgl_prim1.node_name = 1349019904,
+		mgl_prim1.numwords = 1,
+		mgl_prim1.shift_count_bits = 6,
+		mgl_prim1.width_word = 32,
+		mgl_prim1.widthad = 1;
 	assign
-		result = 32'b01000000000000100000110001001010;
-endmodule //cnst_lpm_constant_949
+		result = wire_mgl_prim1_data_write;
+endmodule //cnst_lpm_constant_k1b
 //VALID FILE
 
 
@@ -66,7 +79,7 @@ module cnst (
 	wire [31:0] sub_wire0;
 	wire [31:0] result = sub_wire0[31:0];
 
-	cnst_lpm_constant_949	cnst_lpm_constant_949_component (
+	cnst_lpm_constant_k1b	cnst_lpm_constant_k1b_component (
 				.result (sub_wire0));
 
 endmodule
@@ -75,14 +88,14 @@ endmodule
 // CNX file retrieval info
 // ============================================================
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
-// Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
-// Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
+// Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "1"
+// Retrieval info: PRIVATE: JTAG_ID STRING "Phi"
 // Retrieval info: PRIVATE: Radix NUMERIC "10"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 // Retrieval info: PRIVATE: Value NUMERIC "1073876042"
 // Retrieval info: PRIVATE: nBit NUMERIC "32"
 // Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "1073876042"
-// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
+// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=Phi"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_CONSTANT"
 // Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "32"
 // Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL result[31..0]
