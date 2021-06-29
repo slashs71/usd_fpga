@@ -20,6 +20,6 @@ PATTERN         % test Inpluse %
 INPUTS clk_en;
 PATTERN
 0>    1;
-OUTPUTS fir_result[11..0];
+OUTPUTS fir_result[26..0];
 OUTPUTS done;
 OUTPUTS rdy_to_ld;

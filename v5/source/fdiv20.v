@@ -5,10 +5,10 @@ module fdiv20
 );
 
 reg[5:0] cnt;
-localparam cnt_end=19;
+localparam cnt_end=20;
 
 always@(posedge iclk)begin
-if (cnt<cnt_end)
+if (cnt<cnt_end-1)
 	cnt <= cnt+1;
 else	
 	cnt <= 0;

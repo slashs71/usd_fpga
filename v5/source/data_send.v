@@ -6,7 +6,7 @@ module data_send(
 );
 
 localparam cnt_end = 10;
-localparam N = 32;
+localparam N = 512;
 
 reg[7:0] data;
 reg[9:0] cntN;

@@ -49,7 +49,7 @@ module lpf8 (
 	input		ast_sink_valid;
 	input		ast_source_ready;
 	input	[1:0]	ast_sink_error;
-	output	[11:0]	ast_source_data;
+	output	[26:0]	ast_source_data;
 	output		ast_sink_ready;
 	output		ast_source_valid;
 	output	[1:0]	ast_source_error;
@@ -95,9 +95,9 @@ endmodule
 // Retrieval info:      <PRIVATE name = "input_binary_point_position" value="0"  type="INTEGER"  enable="0" />
 // Retrieval info:      <PRIVATE name = "output_bit_width_method" value="Actual Coefficients"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_number_system" value="Custom Resolution"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "output_bit_width" value="12"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "output_bits_right_of_binary_point" value="12"  type="INTEGER"  enable="0" />
-// Retrieval info:      <PRIVATE name = "output_bits_removed_from_lsb" value="9"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "output_bit_width" value="27"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "output_bits_right_of_binary_point" value="22"  type="INTEGER"  enable="0" />
+// Retrieval info:      <PRIVATE name = "output_bits_removed_from_lsb" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_lsb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_msb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "flow_control" value="0"  type="INTEGER"  enable="1" />
@@ -120,7 +120,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "output_full_bit_width" value="27"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_full_bits_right_of_binary_point" value="22"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "coefficient_reload_bit_width" value="15"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "logic_cell" value="1472"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "logic_cell" value="1517"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m512" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m4k" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m144k" value="0"  type="INTEGER"  enable="1" />

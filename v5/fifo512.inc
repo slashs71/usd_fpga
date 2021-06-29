@@ -13,13 +13,17 @@
 --applicable agreement for further details.
 
 
-FUNCTION pll 
+FUNCTION fifo512 
 (
-	inclk0
+	data[11..0],
+	rdclk,
+	rdreq,
+	wrclk,
+	wrreq
 )
 
 RETURNS (
-	c0,
-	c1,
-	locked
+	q[11..0],
+	rdempty,
+	wrfull
 );

@@ -30,3 +30,63 @@ Current editor: GED, STED, RPW, MED, PGMW, STED
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
 </internal_error>
 
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>S2T</sub_system>
+	<file>/quartus/tsm/s2t/s2t_visitors.cpp</file>
+	<line>1265</line>
+	<callstack>
+	0x0689922c: TSM_S2T + 0x922c (?s2t_adjust_routing_delays_across_boundaries@@YIXPAVTDB_NETLIST@@PAVS2T_SGATE_TDB_MAP@@PAV?$map@IUTDB_BOUNDARY@@U?$less@I@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@IUTDB_BOUNDARY@@@_Dinkum_std@@@@@_Dinkum_std@@@Z + 0x173c)
+	0x068a8c62: TSM_S2T + 0x18c62 (?get_cell_from_sgate@S2T_SGATE_TDB_MAP@@QAIPAVTDB_NETLIST_CELL@@PAVCDB_SGATE_NODE@@@Z + 0x42)
+	0x068998b7: TSM_S2T + 0x98b7 (?s2t_fill_iname_maps_for_component@@YIXPAVCDB_SGATE_NODE@@PAV?$map@PAVCDB_SGATE_ITERM@@IU?$less@PAVCDB_SGATE_ITERM@@@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@PAVCDB_SGATE_ITERM@@I@_Dinkum_std@@@@@_Dinkum_std@@PAV?$map@PAVCDB_SGATE_OTERM@@IU?$less@PAVCDB_SGATE_OTERM@@@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@PAVCDB_SGATE_OTERM@@I@_Dinkum_std@@@@@3@@Z + 0x657)
+	0x00201cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x0689af21: TSM_S2T + 0xaf21 (?s2t_build_tdb_netlist@@YI_NPAVCMP_FACADE@@PAVCDB_SGATE_NETLIST@@PAVTDB_NETLIST@@PAVS2T_SGATE_TDB_MAP@@PAV?$map@IUTDB_BOUNDARY@@U?$less@I@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@IUTDB_BOUNDARY@@@_Dinkum_std@@@@@_Dinkum_std@@_N5@Z + 0x1d1)
+	0x02eded6c: db_cdb_sgate + 0x1ed6c (?allocate_info_node@CDB_SGATE_NETLIST@@AAIPAVCDB_SGATE_INFO@@PAVCDB_SGATE_NODE@@@Z + 0xbc)
+	</callstack>
+	<error>tdb_src_node</error>
+	<date>Tue Jun 29 18:50:41 2021</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>tdb_src_node
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>S2T</sub_system>
+	<file>/quartus/tsm/s2t/s2t_visitors.cpp</file>
+	<line>1265</line>
+	<callstack>
+	0x0689922c: TSM_S2T + 0x922c (?s2t_adjust_routing_delays_across_boundaries@@YIXPAVTDB_NETLIST@@PAVS2T_SGATE_TDB_MAP@@PAV?$map@IUTDB_BOUNDARY@@U?$less@I@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@IUTDB_BOUNDARY@@@_Dinkum_std@@@@@_Dinkum_std@@@Z + 0x173c)
+	0x068a8c62: TSM_S2T + 0x18c62 (?get_cell_from_sgate@S2T_SGATE_TDB_MAP@@QAIPAVTDB_NETLIST_CELL@@PAVCDB_SGATE_NODE@@@Z + 0x42)
+	0x068998b7: TSM_S2T + 0x98b7 (?s2t_fill_iname_maps_for_component@@YIXPAVCDB_SGATE_NODE@@PAV?$map@PAVCDB_SGATE_ITERM@@IU?$less@PAVCDB_SGATE_ITERM@@@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@PAVCDB_SGATE_ITERM@@I@_Dinkum_std@@@@@_Dinkum_std@@PAV?$map@PAVCDB_SGATE_OTERM@@IU?$less@PAVCDB_SGATE_OTERM@@@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@PAVCDB_SGATE_OTERM@@I@_Dinkum_std@@@@@3@@Z + 0x657)
+	0x001a1cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x0689af21: TSM_S2T + 0xaf21 (?s2t_build_tdb_netlist@@YI_NPAVCMP_FACADE@@PAVCDB_SGATE_NETLIST@@PAVTDB_NETLIST@@PAVS2T_SGATE_TDB_MAP@@PAV?$map@IUTDB_BOUNDARY@@U?$less@I@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@IUTDB_BOUNDARY@@@_Dinkum_std@@@@@_Dinkum_std@@_N5@Z + 0x1d1)
+	0x02eded6c: db_cdb_sgate + 0x1ed6c (?allocate_info_node@CDB_SGATE_NETLIST@@AAIPAVCDB_SGATE_INFO@@PAVCDB_SGATE_NODE@@@Z + 0xbc)
+	</callstack>
+	<error>tdb_src_node</error>
+	<date>Tue Jun 29 18:51:15 2021</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>tdb_src_node
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>S2T</sub_system>
+	<file>/quartus/tsm/s2t/s2t_visitors.cpp</file>
+	<line>1265</line>
+	<callstack>
+	0x0689922c: TSM_S2T + 0x922c (?s2t_adjust_routing_delays_across_boundaries@@YIXPAVTDB_NETLIST@@PAVS2T_SGATE_TDB_MAP@@PAV?$map@IUTDB_BOUNDARY@@U?$less@I@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@IUTDB_BOUNDARY@@@_Dinkum_std@@@@@_Dinkum_std@@@Z + 0x173c)
+	0x068a8c62: TSM_S2T + 0x18c62 (?get_cell_from_sgate@S2T_SGATE_TDB_MAP@@QAIPAVTDB_NETLIST_CELL@@PAVCDB_SGATE_NODE@@@Z + 0x42)
+	0x068998b7: TSM_S2T + 0x98b7 (?s2t_fill_iname_maps_for_component@@YIXPAVCDB_SGATE_NODE@@PAV?$map@PAVCDB_SGATE_ITERM@@IU?$less@PAVCDB_SGATE_ITERM@@@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@PAVCDB_SGATE_ITERM@@I@_Dinkum_std@@@@@_Dinkum_std@@PAV?$map@PAVCDB_SGATE_OTERM@@IU?$less@PAVCDB_SGATE_OTERM@@@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@PAVCDB_SGATE_OTERM@@I@_Dinkum_std@@@@@3@@Z + 0x657)
+	0x001b1cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x0689af21: TSM_S2T + 0xaf21 (?s2t_build_tdb_netlist@@YI_NPAVCMP_FACADE@@PAVCDB_SGATE_NETLIST@@PAVTDB_NETLIST@@PAVS2T_SGATE_TDB_MAP@@PAV?$map@IUTDB_BOUNDARY@@U?$less@I@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@U?$pair@IUTDB_BOUNDARY@@@_Dinkum_std@@@@@_Dinkum_std@@_N5@Z + 0x1d1)
+	0x02eded6c: db_cdb_sgate + 0x1ed6c (?allocate_info_node@CDB_SGATE_NETLIST@@AAIPAVCDB_SGATE_INFO@@PAVCDB_SGATE_NODE@@@Z + 0xbc)
+	</callstack>
+	<error>tdb_src_node</error>
+	<date>Tue Jun 29 18:54:08 2021</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>tdb_src_node
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

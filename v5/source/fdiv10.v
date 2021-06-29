@@ -15,10 +15,12 @@ else
 end 
 
 always@(posedge iclk) begin
-if (cnt<cnt_end/2)
-	oclk<=1;
-else	
-	oclk<=0;
+	case (cnt)
+		0,1,2,3,4:
+					oclk	<= 1;
+		default:
+					oclk	<= 0;
+	endcase
 end
 
 endmodule

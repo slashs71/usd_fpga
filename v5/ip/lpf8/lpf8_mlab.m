@@ -12,8 +12,6 @@
 %FILTER PARAMETER                                                                                                                       
 %Input Data Type:	Signed
 %Input Data Width:	12
-%MSB Truncated Bits: %MSB Satuated Bits :6
-%LSB Truncated bits:%LSB Rounded bits  :9
 %FIR Width (Full Calculation Width Before Output Width Adjust) :   27
 %-----------------------------------------------------------------------------------------------------------
 
@@ -22,9 +20,9 @@
 	coef_matrix=[0 1 9 34 88 188 348 575 862 1187 1511 1790 1980 2047 1980 1790 1511 1187 862 575 348 188 88 34 9 1 0 ];
 	INTER_FACTOR  = 1;
 	DECI_FACTOR  = 1; 
-	MSB_RM  = 6;
+	MSB_RM  = 0;
 	MSB_TYPE  = 0;
-	LSB_RM  = 9;
+	LSB_RM  = 0;
 	LSB_TYPE  = 0;
 	FIR_WIDTH  = 27;
 	OUT_WIDTH  = FIR_WIDTH - MSB_RM - LSB_RM ;

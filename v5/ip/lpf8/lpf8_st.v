@@ -35,9 +35,6 @@ parameter DATA_WIDTH  = 12;
 parameter COEF_WIDTH  = 11;
 parameter ACCUM_WIDTH = 27;
 
-parameter MSB_RM = 6;
-parameter LSB_RM = 9;
-parameter WIDTH_SAT = ACCUM_WIDTH-LSB_RM;
 input clk, rst;
 input [DATA_WIDTH-1:0] data_in;
 input clk_en;
@@ -48,7 +45,7 @@ wire data_ld;
 output done;
 wire done;
 wire done_int;
-output [ACCUM_WIDTH-MSB_RM-LSB_RM-1:0] fir_result;
+output [ACCUM_WIDTH-1:0] fir_result;
 wire addr_low;
 assign addr_low = 1'b0;
 
@@ -1706,13 +1703,7 @@ defparam Umtl.DATA_WIDTH = 32;
 wire [26:0] fir_int_res;
 assign fir_int_res = atree_res [26:0];
 
-// ---- Limiting Precision ---- 
-wire [26:0]fir_int_res_fill;
-assign fir_int_res_fill =  fir_int_res[26 :0];
-parameter TOT_WIDTH = ACCUM_WIDTH;
-assign fir_result = fir_int_res_fill[TOT_WIDTH-MSB_RM-1:LSB_RM];
-
-
+assign fir_result = fir_int_res[ACCUM_WIDTH-1:0];
 wire pre_rdy;
 assign rdy_to_ld = pre_rdy;
 assign done = done_int;

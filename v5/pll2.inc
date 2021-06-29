@@ -13,13 +13,11 @@
 --applicable agreement for further details.
 
 
-FUNCTION pll 
+FUNCTION pll2 
 (
 	inclk0
 )
 
 RETURNS (
-	c0,
-	c1,
-	locked
+	c0
 );

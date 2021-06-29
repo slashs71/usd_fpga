@@ -20,7 +20,7 @@
 <PRIVATE name = "output_number_system" value="Custom Resolution"  type="STRING"  enable="1" />
 <PRIVATE name = "output_bit_width" value="12"  type="INTEGER"  enable="1" />
 <PRIVATE name = "output_bits_right_of_binary_point" value="12"  type="INTEGER"  enable="0" />
-<PRIVATE name = "output_bits_removed_from_lsb" value="12"  type="INTEGER"  enable="1" />
+<PRIVATE name = "output_bits_removed_from_lsb" value="9"  type="INTEGER"  enable="1" />
 <PRIVATE name = "output_lsb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 <PRIVATE name = "output_msb_remove_type" value="Truncate"  type="STRING"  enable="1" />
 <PRIVATE name = "flow_control" value="0"  type="INTEGER"  enable="1" />
