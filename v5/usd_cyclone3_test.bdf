@@ -1124,31 +1124,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1488 1496 1536 1528)
-	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
-	(text "inst8" (rect 3 21 26 33)(font "Arial" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 13 16)(line_width 1))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(line (pt 39 16)(pt 48 16)(line_width 1))
-	)
-	(drawing
-		(line (pt 13 25)(pt 13 7)(line_width 1))
-		(line (pt 13 7)(pt 31 16)(line_width 1))
-		(line (pt 13 25)(pt 31 16)(line_width 1))
-		(circle (rect 31 12 39 20)(line_width 1))
-	)
-)
-(symbol
 	(rect 1128 872 1176 904)
 	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst1" (rect 3 21 26 33)(font "Arial" ))
@@ -1587,15 +1562,6 @@ applicable agreement for further details.
 	(pt 1160 1272)
 )
 (connector
-	(text "f8_in" (rect 1466 1496 1490 1508)(font "Arial" ))
-	(pt 1456 1512)
-	(pt 1488 1512)
-)
-(connector
-	(pt 1536 1512)
-	(pt 1600 1512)
-)
-(connector
 	(pt 2400 1288)
 	(pt 2392 1288)
 )
@@ -1763,12 +1729,17 @@ applicable agreement for further details.
 	(pt 544 848)
 )
 (connector
-	(text "f2kn" (rect 5554 1216 5576 1228)(font "Arial" ))
+	(text "f2k" (rect 5554 1216 5570 1228)(font "Arial" ))
 	(pt 5544 1232)
 	(pt 5600 1232)
 )
 (connector
-	(text "out54[11..0]" (rect 5490 1176 5549 1188)(font "Arial" ))
+	(text "f8_in" (rect 1466 1496 1490 1508)(font "Arial" ))
+	(pt 1456 1512)
+	(pt 1600 1512)
+)
+(connector
+	(text "out55[11..0]" (rect 5490 1176 5549 1188)(font "Arial" ))
 	(pt 5488 1192)
 	(pt 5600 1192)
 	(bus)
