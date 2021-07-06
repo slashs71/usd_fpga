@@ -49,7 +49,7 @@ module lpf8 (
 	input		ast_sink_valid;
 	input		ast_source_ready;
 	input	[1:0]	ast_sink_error;
-	output	[26:0]	ast_source_data;
+	output	[25:0]	ast_source_data;
 	output		ast_sink_ready;
 	output		ast_source_valid;
 	output	[1:0]	ast_source_error;
@@ -86,7 +86,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "filter_rate" value="Single Rate"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "filter_factor" value="2"  type="INTEGER"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficient_scaling_type" value="Auto"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "coefficient_scaling_factor" value="27293.443414549296"  type="STRING"  enable="0" />
+// Retrieval info:      <PRIVATE name = "coefficient_scaling_factor" value="27293.370207730415"  type="STRING"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficient_bit_width" value="12"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "coefficient_binary_point_position" value="0"  type="INTEGER"  enable="0" />
 // Retrieval info:      <PRIVATE name = "number_of_input_channels" value="1"  type="INTEGER"  enable="1" />
@@ -95,7 +95,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "input_binary_point_position" value="0"  type="INTEGER"  enable="0" />
 // Retrieval info:      <PRIVATE name = "output_bit_width_method" value="Actual Coefficients"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_number_system" value="Custom Resolution"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "output_bit_width" value="27"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "output_bit_width" value="26"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_bits_right_of_binary_point" value="22"  type="INTEGER"  enable="0" />
 // Retrieval info:      <PRIVATE name = "output_bits_removed_from_lsb" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_lsb_remove_type" value="Truncate"  type="STRING"  enable="1" />
@@ -114,13 +114,13 @@ endmodule
 // Retrieval info:      <PRIVATE name = "force_non_symmetric_structure" value="0"  type="BOOLEAN"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficients_reload" value="0"  type="BOOLEAN"  enable="0" />
 // Retrieval info:      <PRIVATE name = "coefficients_reload_sgl_clock" value="0"  type="BOOLEAN"  enable="1" />
-// Retrieval info:      <PRIVATE name = "max_clocks_to_compute" value="1"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "set_1" value="Low Pass Set, Floating, Low Pass, Blackman, 27, 8000000.0, 300000.0, 3750000.0, 0, 0.0, 4.3981E-5, 3.43475E-4, 0.00124665, 0.00324475, 0.006918, 0.0127863, 0.0210952, 0.0316089, 0.0434987, 0.0553953, 0.0656196, 0.0725471, 0.0749997, 0.0725471, 0.0656196, 0.0553953, 0.0434987, 0.0316089, 0.0210952, 0.0127863, 0.006918, 0.00324475, 0.00124665, 3.43475E-4, 4.3981E-5, 0.0"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "max_clocks_to_compute" value="4"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "set_1" value="Low Pass Set, Floating, Low Pass, Blackman, 15, 8000000.0, 300000.0, 3750000.0, 0, 0.0, 0.00101625, 0.0053201, 0.0152362, 0.0316416, 0.0515858, 0.0683903, 0.0749999, 0.0683903, 0.0515858, 0.0316416, 0.0152362, 0.0053201, 0.00101625, 0.0"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "number_of_sets" value="1"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "output_full_bit_width" value="27"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "output_full_bit_width" value="26"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "output_full_bits_right_of_binary_point" value="22"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "coefficient_reload_bit_width" value="15"  type="INTEGER"  enable="1" />
-// Retrieval info:      <PRIVATE name = "logic_cell" value="1517"  type="INTEGER"  enable="1" />
+// Retrieval info:      <PRIVATE name = "logic_cell" value="917"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m512" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m4k" value="0"  type="INTEGER"  enable="1" />
 // Retrieval info:      <PRIVATE name = "m144k" value="0"  type="INTEGER"  enable="1" />

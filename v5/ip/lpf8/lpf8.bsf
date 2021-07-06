@@ -68,8 +68,8 @@ applicable agreement for further details.
 	(port
 		(pt 264 32)
 		(output)
-		(text "ast_source_data[26..0]" (rect 0 0 113 12)(font "Arial" ))
-		(text "ast_source_data[26..0]" (rect 130 27 243 39)(font "Arial" ))
+		(text "ast_source_data[25..0]" (rect 0 0 113 12)(font "Arial" ))
+		(text "ast_source_data[25..0]" (rect 130 27 243 39)(font "Arial" ))
 		(line (pt 264 32)(pt 248 32)(line_width 3))
 	)
 	(port

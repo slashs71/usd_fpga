@@ -1,6 +1,6 @@
 % units default to ns %
 START 0 ;
-STOP 1445 ;
+STOP 1325 ;
 INTERVAL 5 ;
 INPUTS clk ;
 PATTERN
@@ -20,6 +20,6 @@ PATTERN         % test Inpluse %
 INPUTS clk_en;
 PATTERN
 0>    1;
-OUTPUTS fir_result[26..0];
+OUTPUTS fir_result[25..0];
 OUTPUTS done;
 OUTPUTS rdy_to_ld;
