@@ -2690,9 +2690,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 4960 1104 5192 1328)
+	(rect 4232 1136 4464 1360)
 	(text "fft32" (rect 5 0 29 12)(font "Arial" ))
-	(text "inst36" (rect 8 208 37 220)(font "Arial" ))
+	(text "inst34" (rect 8 208 37 220)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -2833,7 +2833,7 @@ applicable agreement for further details.
 (symbol
 	(rect 4216 504 4448 728)
 	(text "fft32" (rect 5 0 29 12)(font "Arial" ))
-	(text "inst66" (rect 8 208 37 220)(font "Arial" ))
+	(text "inst20" (rect 8 208 37 220)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -2974,7 +2974,7 @@ applicable agreement for further details.
 (symbol
 	(rect 4944 472 5176 696)
 	(text "fft32" (rect 5 0 29 12)(font "Arial" ))
-	(text "inst67" (rect 8 208 37 220)(font "Arial" ))
+	(text "inst21" (rect 8 208 37 220)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -3113,9 +3113,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 4232 1136 4464 1360)
+	(rect 4960 1104 5192 1328)
 	(text "fft32" (rect 5 0 29 12)(font "Arial" ))
-	(text "inst34" (rect 8 208 37 220)(font "Arial" ))
+	(text "inst36" (rect 8 208 37 220)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -3835,12 +3835,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "di1[18..3]" (rect 4530 1336 4576 1348)(font "Arial" ))
-	(pt 4624 1352)
-	(pt 4520 1352)
-	(bus)
-)
-(connector
 	(text "resi[22..0]" (rect 5202 1216 5251 1228)(font "Arial" ))
 	(pt 5192 1232)
 	(pt 5240 1232)
@@ -3889,11 +3883,6 @@ applicable agreement for further details.
 (connector
 	(pt 4144 552)
 	(pt 4216 552)
-)
-(connector
-	(text "f100" (rect 4170 520 4192 532)(font "Arial" ))
-	(pt 4160 536)
-	(pt 4216 536)
 )
 (connector
 	(pt 4144 512)
@@ -4372,18 +4361,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "multres[23..12]" (rect 5850 1176 5924 1188)(font "Arial" ))
-	(pt 5960 1192)
-	(pt 5840 1192)
-	(bus)
-)
-(connector
-	(text "multres2[23..12]" (rect 5842 544 5922 556)(font "Arial" ))
-	(pt 5952 560)
-	(pt 5832 560)
-	(bus)
-)
-(connector
 	(text "sop_line1" (rect 4474 1200 4520 1212)(font "Arial" ))
 	(pt 4464 1216)
 	(pt 4960 1216)
@@ -4577,12 +4554,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "dq1[18..3]" (rect 4530 1440 4579 1452)(font "Arial" ))
-	(pt 4520 1456)
-	(pt 4624 1456)
-	(bus)
-)
-(connector
 	(pt 4480 1248)
 	(pt 4816 1248)
 )
@@ -4689,6 +4660,35 @@ applicable agreement for further details.
 	(text "f100" (rect 3450 1576 3472 1588)(font "Arial" ))
 	(pt 3440 1592)
 	(pt 3496 1592)
+)
+(connector
+	(text "dq1[18..3]" (rect 4530 1440 4579 1452)(font "Arial" ))
+	(pt 4520 1456)
+	(pt 4624 1456)
+	(bus)
+)
+(connector
+	(text "di1[18..3]" (rect 4530 1336 4576 1348)(font "Arial" ))
+	(pt 4624 1352)
+	(pt 4520 1352)
+	(bus)
+)
+(connector
+	(text "f100n" (rect 4170 520 4198 532)(font "Arial" ))
+	(pt 4160 536)
+	(pt 4216 536)
+)
+(connector
+	(text "multres[24..13]" (rect 5850 1176 5924 1188)(font "Arial" ))
+	(pt 5960 1192)
+	(pt 5840 1192)
+	(bus)
+)
+(connector
+	(text "multres2[24..13]" (rect 5842 544 5922 556)(font "Arial" ))
+	(pt 5952 560)
+	(pt 5832 560)
+	(bus)
 )
 (junction (pt 1544 1256))
 (junction (pt 1544 1288))
