@@ -1,27 +1,268 @@
-<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP3C16 (0x020F20DD)" sof_file="usd_cyclone3.sof" top_level_entity="usd_cyclone3">
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP3C16 (0x020F20DD)" sof_file="usd_cyclone3.sof" top_level_entity="usd_cyclone3_test">
   <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
   </display_tree>
   <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
     <position_info>
       <single attribute="active tab" value="1"/>
       <single attribute="data horizontal scroll position" value="0"/>
-      <single attribute="data vertical scroll position" value="13"/>
-      <single attribute="setup horizontal scroll position" value="0"/>
-      <single attribute="setup vertical scroll position" value="6"/>
+      <single attribute="data vertical scroll position" value="5"/>
       <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="1"/>
-      <single attribute="zoom offset denominator" value="1"/>
-      <single attribute="zoom offset numerator" value="130561"/>
-      <multi attribute="timebars" size="6" value="230,15,150,23,479,274"/>
+      <single attribute="zoom level numerator" value="2"/>
+      <single attribute="zoom offset denominator" value="2"/>
+      <single attribute="zoom offset numerator" value="130945"/>
+      <multi attribute="timebars" size="2" value="37,10"/>
     </position_info>
+    <signal_set global_temp="1" name="signal_set: 2021/07/07 19:42:10  #0">
+      <clock name="fdiv10:inst58|oclk" polarity="posedge" tap_mode="classic"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="128" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="fifo32:inst23|q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[9]" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="fifo32:inst23|q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[9]" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="fifo32:inst23|q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst23|q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="fifo32:inst41|q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="sum:inst75|result[9]" tap_mode="classic" type="combinatorial"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <bus is_signal_inverted="no" link="all" name="fifo32:inst23|q" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="fifo32:inst23|q[0]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[1]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[2]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[3]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[4]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[5]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[6]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[7]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[8]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[9]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[10]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="fifo32:inst41|q" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="fifo32:inst41|q[0]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[1]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[2]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[3]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[4]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[5]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[6]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[7]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[8]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[9]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[10]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sum:inst75|result" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="sum:inst75|result[0]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[1]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[2]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[3]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[4]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[5]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[6]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[7]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[8]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[9]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[10]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[11]"/>
+          </bus>
+        </data_view>
+        <setup_view>
+          <bus is_signal_inverted="no" link="all" name="fifo32:inst23|q" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="fifo32:inst23|q[0]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[1]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[2]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[3]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[4]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[5]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[6]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[7]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[8]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[9]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[10]"/>
+            <net is_signal_inverted="no" name="fifo32:inst23|q[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="fifo32:inst41|q" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="fifo32:inst41|q[0]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[1]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[2]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[3]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[4]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[5]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[6]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[7]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[8]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[9]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[10]"/>
+            <net is_signal_inverted="no" name="fifo32:inst41|q[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sum:inst75|result" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="sum:inst75|result[0]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[1]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[2]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[3]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[4]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[5]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[6]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[7]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[8]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[9]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[10]"/>
+            <net is_signal_inverted="no" name="sum:inst75|result[11]"/>
+          </bus>
+        </setup_view>
+      </presentation>
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2021/07/07 19:42:10  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>000000000000000000000000000000000000
+            <pwr_up_transitional>000000000000000000000000000000000000
+            </pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
   </instance>
   <mnemonics/>
   <static_plugin_mnemonics/>
   <global_info>
     <single attribute="active instance" value="0"/>
     <single attribute="lock mode" value="36110"/>
-    <multi attribute="column width" size="23" value="34,34,258,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
-    <multi attribute="window position" size="9" value="1920,937,559,164,356,50,124,0,0"/>
+    <multi attribute="column width" size="23" value="34,34,301,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="9" value="1916,936,398,124,356,50,124,0,0"/>
   </global_info>
 </session>

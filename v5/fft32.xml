@@ -8,8 +8,8 @@
 <PRIVATE name = "mem_type" value="M512"  type="STRING"  enable="1" />
 <PRIVATE name = "DEVICE" value="Cyclone III"  type="STRING"  enable="1" />
 <PRIVATE name = "NPS" value="32"  type="INTEGER"  enable="1" />
-<PRIVATE name = "MPR" value="12"  type="INTEGER"  enable="1" />
-<PRIVATE name = "TWR" value="12"  type="INTEGER"  enable="1" />
+<PRIVATE name = "MPR" value="16"  type="INTEGER"  enable="1" />
+<PRIVATE name = "TWR" value="16"  type="INTEGER"  enable="1" />
 <PRIVATE name = "ARCH" value="3"  type="INTEGER"  enable="1" />
 <PRIVATE name = "NUME" value="1"  type="INTEGER"  enable="1" />
 <PRIVATE name = "ENGINE_THROUGHPUT" value="4"  type="INTEGER"  enable="1" />
@@ -23,7 +23,7 @@
 <PRIVATE name = "NUM_M4K" value="0"  type="INTEGER"  enable="1" />
 <PRIVATE name = "NUM_MEGA" value="0"  type="INTEGER"  enable="1" />
 <PRIVATE name = "NUM_M512" value="0"  type="INTEGER"  enable="1" />
-<PRIVATE name = "NUM_DSP" value="16"  type="INTEGER"  enable="1" />
+<PRIVATE name = "NUM_DSP" value="24"  type="INTEGER"  enable="1" />
 <PRIVATE name = "NUM_CALC_CYCLES" value="32"  type="INTEGER"  enable="1" />
 <PRIVATE name = "NUM_BLK_THROUGHPUT_CYCLES" value="32"  type="INTEGER"  enable="1" />
 <PRIVATE name = "rfs1" value="romfile_1024.hex"  type="STRING"  enable="1" />
@@ -33,7 +33,7 @@
 <PRIVATE name = "rfc2" value="romfile_1024.hex"  type="STRING"  enable="1" />
 <PRIVATE name = "rfc3" value="romfile_1024.hex"  type="STRING"  enable="1" />
 <PRIVATE name = "ENA" value="0"  type="INTEGER"  enable="1" />
-<PRIVATE name = "NUM_MEMBITS" value="2260"  type="INTEGER"  enable="1" />
+<PRIVATE name = "NUM_MEMBITS" value="2804"  type="INTEGER"  enable="1" />
 <PRIVATE name = "INPUT_ORDER" value="1"  type="INTEGER"  enable="1" />
 <PRIVATE name = "OUTPUT_ORDER" value="1"  type="INTEGER"  enable="1" />
 <PRIVATE name = "REPRESENTATION" value="0"  type="INTEGER"  enable="1" />
