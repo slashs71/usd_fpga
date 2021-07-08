@@ -43,7 +43,7 @@ module nco (
 	input		clk;
 	input		reset_n;
 	input		clken;
-	output	[17:0]	fsin_o;
+	output	[11:0]	fsin_o;
 	output		out_valid;
 
 
@@ -75,7 +75,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "MAX" value="256"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "rfs1" value="xxx.hex"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "devicefamily" value="Cyclone III"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "DPRI" value="5"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "DPRI" value="10"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "DEVICE" value="CycloneIII"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "ACCUM_SCLR" value="0"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "ARCH" value="TRIG_ARCH"  type="STRING"  enable="1" />
@@ -86,15 +86,15 @@ endmodule
 // Retrieval info:      <PRIVATE name = "CK_VALUE" value="10"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "CK_UNIT" value="ns"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "CK_MULT" value="e-9"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "FSAMP_VALUE" value="8"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "FREQ_VALUE" value="2001"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "MPR" value="18"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "FSAMP_VALUE" value="20"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "FREQ_VALUE" value="250"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "MPR" value="12"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "APR" value="32"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "APRI" value="16"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "FSAMP_UNIT" value="MHz"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "FSAMP_MULT" value="1e6"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "FREQ_UNIT" value="kHz"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "FREQ_MULT" value="1e3"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "FSAMP_UNIT" value="kHz"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "FSAMP_MULT" value="1e3"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "FREQ_UNIT" value="Hz"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "FREQ_MULT" value="1"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "WANT_PMOD" value="NO"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "WANT_FMOD" value="NO"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "DUAL_NOT_SGL_OP" value="WANT_SIN_ONLY"  type="STRING"  enable="1" />
@@ -109,7 +109,7 @@ endmodule
 // Retrieval info:      <PRIVATE name = "WANT_VHDL_SIM" value="YES"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "WANT_MATLAB" value="YES"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "WANT_VEC" value="YES"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "PHI_INC" value="1074278695"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "PHI_INC" value="53687091"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "MODULE_NAME" value="nco_st"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NETLIST_FILE_NAME" value="nco_st.v"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "PHASE_INC" value="4096"  type="STRING"  enable="1" />
@@ -126,16 +126,16 @@ endmodule
 // Retrieval info:      <PRIVATE name = "RSFF" value="nco_sin_f.mif"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "RSVF" value="nco_sin_f.v"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "RSHF" value="nco_sin_f.hex"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "MAXC" value="4608"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "MAXF" value="4608"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "MAXC" value="3072"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "MAXF" value="3072"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "RAWC" value="8"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "RAWF" value="8"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "RNWC" value="256"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "RNWF" value="256"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "RDW" value="18"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "NUM_LCELLS" value="1356"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "NUM_MEM_BITS" value="13824"  type="STRING"  enable="1" />
-// Retrieval info:      <PRIVATE name = "NUM_EABS" value="2"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "RDW" value="12"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "NUM_LCELLS" value="738"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "NUM_MEM_BITS" value="9216"  type="STRING"  enable="1" />
+// Retrieval info:      <PRIVATE name = "NUM_EABS" value="1"  type="STRING"  enable="1" />
 // Retrieval info:      <PRIVATE name = "NUM_DSP_BLOCKS" value="4"  type="STRING"  enable="1" />
 // Retrieval info:     </NAMESPACE>
 // Retrieval info:     <NAMESPACE name = "simgen_enable">
@@ -156,7 +156,7 @@ endmodule
 // Retrieval info:    <FILES/>
 // Retrieval info:    <PORTS>
 // Retrieval info:     <PORT name = "phi_inc_i" direction="INPUT"  connect_to="phi_inc_i"  default="NODEFVAL"  high_width="31"  low_width="0"  description="" />
-// Retrieval info:     <PORT name = "fsin_o" direction="OUTPUT"  connect_to="fsin_o"  default="NODEFVAL"  high_width="17"  low_width="0"  description="" />
+// Retrieval info:     <PORT name = "fsin_o" direction="OUTPUT"  connect_to="fsin_o"  default="NODEFVAL"  high_width="11"  low_width="0"  description="" />
 // Retrieval info:     <PORT name = "clk" direction="INPUT"  connect_to="clk"  default="NODEFVAL"  width="1"  description="" />
 // Retrieval info:     <PORT name = "reset_n" direction="INPUT"  connect_to="reset_n"  default="NODEFVAL"  width="1"  description="" />
 // Retrieval info:     <PORT name = "clken" direction="INPUT"  connect_to="clken"  default="NODEFVAL"  width="1"  description="" />

@@ -22,23 +22,23 @@
 
 module nco_st(clk,reset_n,clken,phi_inc_i,fsin_o,out_valid);
 
-parameter mpr = 18;
-parameter opr = 36;
-parameter oprp1 = 37;
+parameter mpr = 12;
+parameter opr = 24;
+parameter oprp1 = 25;
 parameter apr = 32;
 parameter apri= 16;
 parameter aprf= 32;
 parameter aprp= 16;
 parameter aprid=21;
-parameter dpri= 5;
-parameter rdw = 18;
+parameter dpri= 10;
+parameter rdw = 12;
 parameter rawc = 8;
 parameter rnwc = 256;
 parameter rawf = 8;
 parameter rnwf = 256;
 parameter Pn = 16384;
-parameter mxnbc = 4608;
-parameter mxnbf = 4608;
+parameter mxnbc = 3072;
+parameter mxnbf = 3072;
 parameter rsfc = "nco_sin_c.hex";
 parameter rsff = "nco_sin_f.hex";
 parameter rcfc = "nco_cos_c.hex";

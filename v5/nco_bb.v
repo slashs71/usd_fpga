@@ -34,6 +34,6 @@ module nco (
 	input		clk;
 	input		reset_n;
 	input		clken;
-	output	[17:0]	fsin_o;
+	output	[11:0]	fsin_o;
 	output		out_valid;
 endmodule

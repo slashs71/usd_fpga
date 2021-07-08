@@ -8,7 +8,7 @@ add wave -noupdate -divider -height 50 {New Divider}
 add wave -noupdate -format Logic /nco_tb/out_valid
 add wave -noupdate -color Yellow -format Literal -radix decimal  /nco_tb/sin_val
 add wave -noupdate -divider -height 80 {New Divider}
-add wave -noupdate -color Yellow -format Analog-Step -radix decimal -scale 2.5E-4 /nco_tb/sin_val
+add wave -noupdate -color Yellow -format Analog-Step -radix decimal -scale 0.016 /nco_tb/sin_val
 add wave -noupdate -divider -height 80 {New Divider}
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {356 ns}

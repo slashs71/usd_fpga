@@ -22,7 +22,7 @@
 //   NCO ver 9.0 VERILOG HDL TESTBENCH
 `timescale 1ps / 1ps
 module nco_tb;
-wire [17:0] sin_val;
+wire [11:0] sin_val;
 reg [31:0] phi;
 wire out_valid;
 reg reset_n;
@@ -37,14 +37,14 @@ initial
     #0 clk = 1'b0;
     #0 reset_n = 1'b0;
     #0 clken = 1'b1;
-    #0 phi = 32'b01000000000010000011000100100111;
-    #874999 reset_n = 1'b1;
+    #0 phi = 32'b00000011001100110011001100110011;
+    #349999999 reset_n = 1'b1;
   end
 
 always
   begin
-    #62500 clk = 1;
-    #62500 clk = 0;
+    #25000000 clk = 1;
+    #25000000 clk = 0;
   end
 
 integer sin_ch, sin_print;
@@ -57,10 +57,10 @@ always @(posedge clk)
   begin
     if(reset_n==1'b1 & out_valid==1'b1)
       begin
-        if (sin_val[17:0] < (1<<17))
-          sin_print = sin_val[17:0];
+        if (sin_val[11:0] < (1<<11))
+          sin_print = sin_val[11:0];
         else
-          sin_print =  sin_val[17:0] - (1<<18);
+          sin_print =  sin_val[11:0] - (1<<12);
 
     $fdisplay (sin_ch, "%d", sin_print);
       end
@@ -68,7 +68,7 @@ end
 
 nco i_nco (
     .out_valid(out_valid),
-    .fsin_o(sin_val[17:0]),
+    .fsin_o(sin_val[11:0]),
     .phi_inc_i(phi[31:0]),
     .reset_n(reset_n),
     .clken(clken),

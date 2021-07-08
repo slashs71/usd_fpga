@@ -31,7 +31,7 @@ use std.textio.all;
 entity nco_tb is   
   generic(
 		APR	:	INTEGER:=32;
-		MPR	:	INTEGER:=18
+		MPR	:	INTEGER:=12
         );
  
 end nco_tb;
@@ -70,7 +70,7 @@ signal phi      	        : std_logic_vector (APR-1 downto 0);
 signal sel_phi            : std_logic_vector(2 downto 0);
 signal sel_output         : std_logic_vector(2 downto 0);
 signal out_valid            : std_logic;
-constant clk_period_2 	: time := 62500 ps;
+constant clk_period_2 	: time := 25000000 ps;
 
 
 begin
@@ -91,7 +91,7 @@ reset_n <= '0',
          '1' after 14*clk_period_2 ;
 clken <= '1';
 
-phi<="01000000000010000011000100100111";
+phi<="00000011001100110011001100110011";
 
 -----------------------------------------------------------------------------------------------
 -- Testbench Clock Generation

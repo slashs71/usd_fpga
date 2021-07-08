@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16F484) Path("D:/MSV/work/tr/SOFT_work/FPGA/usd_fpga/v5/") File("usd_cyclone3.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C16F484) Path("C:/WORK/NF/usd_fpga_ssh/v5/") File("usd_cyclone3.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C16F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY usd_cyclone3_test
+set_global_assignment -name TOP_LEVEL_ENTITY dac_test
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:34:35  JUNE 07, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION 9.0
@@ -125,7 +125,6 @@ set_global_assignment -name QIP_FILE ip/multiply/lpm_mult0.qip
 set_global_assignment -name VERILOG_FILE source/expand_12to16.v
 set_global_assignment -name QIP_FILE ip/sub_sum/sum.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE send_data.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE send_data.vwf
 set_global_assignment -name SIGNALTAP_FILE stp3.stp
 set_global_assignment -name SIGNALTAP_FILE stp_test_line2.stp
 set_global_assignment -name VERILOG_FILE source/fifo_reset.v
@@ -155,12 +154,6 @@ set_location_assignment PIN_G21 -to clk50
 set_location_assignment PIN_V5 -to f8in_out
 set_location_assignment PIN_J1 -to lock
 set_global_assignment -name BDF_FILE usd_cyclone3_test.bdf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_location_assignment PIN_U7 -to F10out2
 set_global_assignment -name SIGNALTAP_FILE test_data_from_work_board.stp
 set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
@@ -179,25 +172,8 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
 set_global_assignment -name QIP_FILE fifo512.qip
-set_global_assignment -name SEARCH_PATH ip/nco/.
-set_global_assignment -name SEARCH_PATH "ip/nco/nco-library"
-set_global_assignment -name SEARCH_PATH ip/lpf400k/.
-set_global_assignment -name SEARCH_PATH "ip/lpf400k/fir_compiler-library"
-set_global_assignment -name SEARCH_PATH ip/fft/.
-set_global_assignment -name SEARCH_PATH "ip/fft/fft-library"
-set_global_assignment -name SEARCH_PATH ip/lpf8/.
-set_global_assignment -name SEARCH_PATH "ip/lpf8/fir_compiler-library"
-set_global_assignment -name SEARCH_PATH ip/.
-set_global_assignment -name SEARCH_PATH "ip/nco-library"
-set_global_assignment -name SEARCH_PATH ./
-set_global_assignment -name SEARCH_PATH "nco-library/"
-set_global_assignment -name SEARCH_PATH ip/./
-set_global_assignment -name SEARCH_PATH "ip/nco-library/"
-set_global_assignment -name SEARCH_PATH .
-set_global_assignment -name SEARCH_PATH "fft-library"
 set_global_assignment -name QIP_FILE pll2.qip
 set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
-set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to clk
 set_global_assignment -name IGNORE_LCELL_BUFFERS ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
@@ -345,3 +321,38 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=215" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=44125" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=43638" -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE source/spi_msv.v
+set_global_assignment -name QIP_FILE ip/pll_dac/pll_dac.qip
+set_global_assignment -name SEARCH_PATH ip/nco/.
+set_global_assignment -name SEARCH_PATH "ip/nco/nco-library"
+set_global_assignment -name SEARCH_PATH ip/lpf400k/.
+set_global_assignment -name SEARCH_PATH "ip/lpf400k/fir_compiler-library"
+set_global_assignment -name SEARCH_PATH ip/fft/.
+set_global_assignment -name SEARCH_PATH "ip/fft/fft-library"
+set_global_assignment -name SEARCH_PATH ip/lpf8/.
+set_global_assignment -name SEARCH_PATH "ip/lpf8/fir_compiler-library"
+set_global_assignment -name SEARCH_PATH ip/.
+set_global_assignment -name SEARCH_PATH "ip/nco-library"
+set_global_assignment -name SEARCH_PATH ./
+set_global_assignment -name SEARCH_PATH "nco-library/"
+set_global_assignment -name SEARCH_PATH ip/./
+set_global_assignment -name SEARCH_PATH "ip/nco-library/"
+set_global_assignment -name SEARCH_PATH .
+set_global_assignment -name SEARCH_PATH "fft-library"
+set_global_assignment -name QIP_FILE const_dac.qip
+set_global_assignment -name BDF_FILE dac_test.bdf
+set_global_assignment -name MISC_FILE "C:/WORK/NF/usd_fpga_ssh/v5/usd_cyclone3.dpf"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to clk
+set_global_assignment -name VECTOR_WAVEFORM_FILE dac_test.vwf
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE dac_test.vwf
+set_location_assignment PIN_AB20 -to CS
+set_location_assignment PIN_AB19 -to SCK
+set_location_assignment PIN_AA18 -to MOSI
