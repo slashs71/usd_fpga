@@ -9,23 +9,33 @@ localparam Nfft=32;
 integer cnt;
 reg [1:0] sink_edge;
 
+//always@(posedge clk)begin
+//	sink_edge <= {sink_edge[0], sink_ready};
+//end
+
+
+//always@(posedge clk)begin
+//	if (sink_edge==2'b01)
+//		cnt<=0;
+//	else
+//		if (cnt<Nfft)
+//			cnt<=cnt+1;
+//		else	
+//			cnt<=Nfft;
+//end
+
 always@(posedge clk)begin
-	sink_edge <= {sink_edge[0], sink_ready};
+if (sink_ready)
+	if (cnt<Nfft)
+		cnt<=cnt+1;
+	else	
+		cnt<=Nfft;
+else
+	cnt<=0;
 end
 
-
 always@(posedge clk)begin
-	if (sink_edge==2'b01)
-		cnt<=0;
-	else
-		if (cnt<Nfft)
-			cnt<=cnt+1;
-		else	
-			cnt<=Nfft;
-end
-
-always@(posedge clk)begin
-if (cnt<13)
+if ((cnt>0) && (cnt<13))
 	filtmx<=0;
 else
 	filtmx<=1;

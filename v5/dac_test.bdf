@@ -400,11 +400,6 @@ applicable agreement for further details.
 	(pt 1104 512)
 )
 (connector
-	(text "f1" (rect 1074 432 1084 444)(font "Arial" ))
-	(pt 1136 448)
-	(pt 1064 448)
-)
-(connector
 	(pt 1280 448)
 	(pt 1304 448)
 )
@@ -425,5 +420,10 @@ applicable agreement for further details.
 	(text "f2k" (rect 1034 216 1050 228)(font "Arial" ))
 	(pt 1024 232)
 	(pt 1096 232)
+)
+(connector
+	(text "f1" (rect 1074 432 1084 444)(font "Arial" ))
+	(pt 1136 448)
+	(pt 1064 448)
 )
 (junction (pt 512 528))
