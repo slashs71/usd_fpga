@@ -501,6 +501,7 @@ applicable agreement for further details.
 	(pt 600 480)
 )
 (connector
+<<<<<<< HEAD
 	(text "f2k" (rect 1314 480 1330 492)(font "Arial" ))
 	(pt 1376 496)
 	(pt 1304 496)
@@ -508,6 +509,9 @@ applicable agreement for further details.
 (connector
 	(text "f1" (rect 1314 432 1324 444)(font "Arial" ))
 	(pt 1376 448)
+=======
+	(pt 1280 448)
+>>>>>>> 2f4bb20094ef1ebfa9c253433fa627e12f4b4b9c
 	(pt 1304 448)
 )
 (connector
@@ -559,4 +563,13 @@ applicable agreement for further details.
 	(pt 1376 480)
 	(bus)
 )
+<<<<<<< HEAD
 (junction (pt 216 528))
+=======
+(connector
+	(text "f1" (rect 1074 432 1084 444)(font "Arial" ))
+	(pt 1136 448)
+	(pt 1064 448)
+)
+(junction (pt 512 528))
+>>>>>>> 2f4bb20094ef1ebfa9c253433fa627e12f4b4b9c

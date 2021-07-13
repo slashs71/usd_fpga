@@ -18,7 +18,7 @@ module spi_msv(
 );
 
 localparam txdata_width = 16;
-localparam bit_tau=10; //input_Clk=1M   out_clk=100k
+localparam bit_tau=10; //input_Clk=400k   out_clk=40k
 localparam bit_mid=bit_tau/2;
 
 reg sclk_int;

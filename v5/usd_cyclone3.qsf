@@ -102,12 +102,12 @@ set_location_assignment PIN_AB16 -to Din[0]
 set_location_assignment PIN_G21 -to clk50
 set_location_assignment PIN_V5 -to f8in_out
 set_location_assignment PIN_J1 -to lock
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity usd_cyclone3_test -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -entity usd_cyclone3_test -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -entity usd_cyclone3_test -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -entity usd_cyclone3_test -section_id "Root Region"
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -entity usd_cyclone3_test -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity usd_cyclone3_test -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_location_assignment PIN_U7 -to F10out2
 set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
@@ -125,7 +125,7 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
 set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
-set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to clk -entity usd_cyclone3_test
+set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to clk
 set_global_assignment -name IGNORE_LCELL_BUFFERS ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
@@ -144,13 +144,13 @@ set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] 
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to UART_TXD -section_id auto_signaltap_0
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "data_send:inst20|oNewData" -section_id auto_signaltap_0
 set_global_assignment -name MISC_FILE "C:/WORK/NF/usd_fpga_ssh/v5/usd_cyclone3.dpf"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to clk
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity dac_test -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity dac_test -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -entity dac_test -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -entity dac_test -section_id "Root Region"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -entity dac_test -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity dac_test -section_id Top
+set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to clk -entity dac_test
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE dac_test.vwf
 set_location_assignment PIN_AB20 -to CS
 set_location_assignment PIN_AB19 -to SCK
@@ -188,6 +188,13 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=1
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=18502" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=1024" -section_id auto_signaltap_0
 set_global_assignment -name QIP_FILE pll2.qip
+set_global_assignment -name IP_TOOL_NAME ALTPLL -qip pll2.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip pll2.qip
+set_global_assignment -name VERILOG_FILE pll2.v -qip pll2.qip
+set_global_assignment -name MISC_FILE pll2.bsf -qip pll2.qip
+set_global_assignment -name MISC_FILE pll2_bb.v -qip pll2.qip
+set_global_assignment -name MISC_FILE pll2.inc -qip pll2.qip
+set_global_assignment -name MISC_FILE pll2.ppf -qip pll2.qip
 set_global_assignment -name VERILOG_FILE source/hann32.v
 set_global_assignment -name VERILOG_FILE source/VGA_BITSTREAM.v
 set_global_assignment -name VERILOG_FILE source/VGA_MAIN.v
@@ -195,27 +202,628 @@ set_global_assignment -name VERILOG_FILE source/VGA_OUT.v
 set_global_assignment -name VERILOG_FILE source/VGA_SYNC.v
 set_global_assignment -name BDF_FILE ip/const/usd_cyclone3.bdf
 set_global_assignment -name QIP_FILE ip/nco/nco.qip
+set_global_assignment -name IP_TOOL_NAME NCO -qip ip/nco/nco.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/nco/nco.qip
+set_global_assignment -name VERILOG_FILE ip/nco/nco_st.v -qip ip/nco/nco.qip
+set_global_assignment -name VERILOG_FILE ip/nco/nco.v -qip ip/nco/nco.qip
+set_global_assignment -name SEARCH_PATH ip/nco/. -qip ip/nco/nco.qip
+set_global_assignment -name SEARCH_PATH "ip/nco/nco-library" -qip ip/nco/nco.qip
+set_global_assignment -name OCP_FILE "ip/nco/nco-library/asj_altq.ocp" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_altq.v" -qip ip/nco/nco.qip
+set_global_assignment -name OCP_FILE "ip/nco/nco-library/asj_altqmcash.ocp" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_altqmcash.v" -qip ip/nco/nco.qip
+set_global_assignment -name OCP_FILE "ip/nco/nco-library/asj_altqmcpipe.ocp" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_altqmcpipe.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_altqmcpipe_rst.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_crd.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_crs.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_dxx.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_dxx_g.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_gal.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_gam.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_gam_dp.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_gar.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_aprid_dxx.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_apr_dxx.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_as_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_as_m_cen.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_as_m_dp.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_as_m_dp_cen.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_d1gam.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_derot.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_fxx.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_isdr.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_isdr_mc.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_isdr_throughput2.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_lp_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_madx.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_madx_cen.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_mady.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_mady_cen.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_mcin.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_mciosel.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_mcout.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_mob_rw.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_mob_sw.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_mob_w.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_pmd2.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_pmd2gam.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_nco_pxx.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/asj_xnqg.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_avalon_streaming_block_sink.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_avalon_streaming_block_source.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_avalon_streaming_controller.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_avalon_streaming_controller_pe.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_avalon_streaming_sink.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_avalon_streaming_source.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_delay.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_lib_pkg.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_math_pkg.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/auk_dspip_text_pkg.vhd" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_10_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_11_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_12_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_13_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_14_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_15_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_16_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_17_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_18_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_19_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_20_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_21_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_22_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_23_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_24_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_25_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_26_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_27_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_28_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_29_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_30_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_31_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_32_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_3_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_4_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_5_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_6_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_7_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_8_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_9_m.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_axor_0p_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_axor_1p_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_axor_2p_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_axor_ser.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_cnt.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_cnt_sig.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_reg_ser.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_sxor_0p_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_sxor_1p_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_sxor_2p_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_sxor_ser.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_zxor_0p_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_zxor_1p_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_zxor_2p_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cordic_zxor_ser.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_2c.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_acc_ena.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_en.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_fs.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_init.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_init_pm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_init_ser.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_init_ser_pm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_lut.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_lut_1p.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_rot_dual.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_rot_sgl.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/cord_seg_sel.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/dop_reg.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/las.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/lms.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/lmsd.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/mac_i_lpm.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/mac_i_lpmd.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/m_output_blk_reg.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/m_output_blk_rw.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/m_output_blk_w.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/segment_arr_tdl.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/segment_sel.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/segment_sel_sgl.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/sid_2c_1p.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE "ip/nco/nco-library/sop_reg.v" -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco.v -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco_bb.v -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco.bsf -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco_st.v -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco.vo -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco_tb.v -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco_vo_msim.tcl -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco_wave.do -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco_model.m -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco_tb.m -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco.vec -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco_nativelink.tcl -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco.qip -qip ip/nco/nco.qip
+set_global_assignment -name MISC_FILE ip/nco/nco.html -qip ip/nco/nco.qip
 set_global_assignment -name QIP_FILE ip/const/cnst.qip
+set_global_assignment -name IP_TOOL_NAME LPM_CONSTANT -qip ip/const/cnst.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/const/cnst.qip
+set_global_assignment -name VERILOG_FILE ip/const/cnst.v -qip ip/const/cnst.qip
+set_global_assignment -name MISC_FILE ip/const/cnst.bsf -qip ip/const/cnst.qip
+set_global_assignment -name MISC_FILE ip/const/cnst_bb.v -qip ip/const/cnst.qip
+set_global_assignment -name MISC_FILE ip/const/cnst.inc -qip ip/const/cnst.qip
 set_global_assignment -name VERILOG_FILE source/iqForm.v
 set_global_assignment -name QIP_FILE ip/pll/pll.qip
+set_global_assignment -name IP_TOOL_NAME ALTPLL -qip ip/pll/pll.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/pll/pll.qip
+set_global_assignment -name VERILOG_FILE ip/pll/pll.v -qip ip/pll/pll.qip
+set_global_assignment -name MISC_FILE ip/pll/pll.bsf -qip ip/pll/pll.qip
+set_global_assignment -name MISC_FILE ip/pll/pll_bb.v -qip ip/pll/pll.qip
+set_global_assignment -name MISC_FILE ip/pll/pll.inc -qip ip/pll/pll.qip
+set_global_assignment -name MISC_FILE ip/pll/pll.ppf -qip ip/pll/pll.qip
 set_global_assignment -name VERILOG_FILE source/fdiv2.v
 set_global_assignment -name VERILOG_FILE source/fdiv20.v
 set_global_assignment -name QIP_FILE ip/lpf400k/lpf400k.qip
+set_global_assignment -name IP_TOOL_NAME "FIR Compiler" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name VHDL_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_lib_pkg_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name VHDL_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_math_pkg_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name VERILOG_FILE ip/lpf400k/lpf400k_st.v -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name VHDL_FILE ip/lpf400k/lpf400k_ast.vhd -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name VERILOG_FILE ip/lpf400k/lpf400k.v -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name SEARCH_PATH ip/lpf400k/. -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name SEARCH_PATH "ip/lpf400k/fir_compiler-library" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/accum.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/addr_cnt_dn.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/addr_cnt_dn_poly.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/addr_cnt_up.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/at_sink_mod.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/at_sink_mod_bin.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/at_sink_mod_par.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/at_src_mod.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/at_src_mod_par.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_block_sink_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_block_source_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_controller_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_controller_pe_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_monitor_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name OCP_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_sink_fir_90.ocp" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_sink_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_sink_model_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_source_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_source_from_monitor_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_avalon_streaming_source_model_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_delay_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fastaddsub_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fastadd_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fast_accumulator_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fifo_pfc_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_accumulator_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_adders_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_adder_tree_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_avalon_slave_write_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_coef_banks_fixed_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_data_memory_bank_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_dspblock_bank_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_dspblock_cascade_bank_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_lib_pkg_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_math_pkg_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_memory_simple_dual_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_memory_single_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_memory_true_dual_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_mult_bank_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name OCP_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_top_dec_half_sym_fir_90.ocp" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_top_dec_half_sym_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_top_dec_sym_add_cas_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name OCP_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_top_dec_sym_cas_fir_90.ocp" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name OCP_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_top_int_sym_fir_90.ocp" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_top_int_sym_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name OCP_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_top_sin_sym_fir_90.ocp" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_fir_top_sin_sym_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_lib_pkg_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_math_pkg_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_pfc_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_pipelined_adder_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_roundsat_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/auk_dspip_text_pkg_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/coef_in_conv.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/data_cnt_dn_stat.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/data_cnt_up.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/data_sel_dec.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/dat_mm_brg.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/dat_store.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/dat_store_c.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/decoder_we.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/decoder_we_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/delay.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/delay_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/delay_mul.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/delay_mul_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/delay_mux.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/delay_mux_mch_odd.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/delay_mux_mch_odd_mcv.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/delay_trig.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/delay_trig_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/eab_tdl_hc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/eab_tdl_strat.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/eab_tdl_strat_mram.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/fir_definitions_pkg_fir_90.vhd" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/lc_store.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/lc_store_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/lc_tdl_strat.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/lc_tdl_strat_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/maccum.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/maccum_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name OCP_FILE "ip/lpf400k/fir_compiler-library/mac_tl.ocp" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mac_tl.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mcv_ctrl_deci.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mcv_ctrl_nc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu_dly1.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu_dly2.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu_inf_1reg.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu_inf_1reg_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu_inf_2reg.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu_inf_2reg_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu_nd.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu_nd_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mlu_nd_lc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_accum_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_acc_ctrl_cen_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_acc_ctrl_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_decoder_we_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_del_coef_set.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_dnc_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_lcdelay_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_lcstore_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_lrdy_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_mux_2to1_cen_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_mux_2to1_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_ser_shift_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_upc_reload_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mr_upc_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_data.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_data_reseq.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_data_reseq_mc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_lt_128.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_lt_32.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_mcv.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_mem.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_mem_coef.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_mem_hc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_mem_mcoef.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_mem_reseq.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_mem_reseq_hc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_mem_reseq_mcycle.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_reseq_mc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/msft_scv.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mul_add.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mux_16.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mux_16_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mux_2to1.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mux_2to1_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mux_2to1_comb.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/mux_nc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/para_tdl.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/par_ctrl.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/par_ld_ser_tdl_nc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/par_ld_ser_tdl_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/pll_fir.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/poly_mac_ctrl_dec.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/poly_mac_ctrl_int.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ram_2pt_mram_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ram_2pt_var.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ram_2pt_var_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ram_2pt_var_cen_hc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ram_inf.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ram_lut.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ram_lut_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rnd_dat.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_6_lut.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_6_lut_r.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_lut.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_lut_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_lut_r.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_lut_r_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_mset_lut.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_mset_lut_r.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_mset_lut_r_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_mset_lut_r_cen_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/rom_mset_lut_r_wr.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_c.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_c_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_load.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_lpm.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_lpm_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_lpm_reg_top_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_reg_top.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_reg_top_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sadd_sub.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sat_dat.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/scale_accum.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/scale_accum_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/scale_shft_comb.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/scale_shft_comb_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/scv_ctrl.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/scv_ctrl_deci.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sc_add.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ser_ctrl_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ser_shft.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ser_shft_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ser_shift.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sgn_ext.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/shift_in.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/shift_out.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/slave2slave.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ssub.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ssub_c.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ssub_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ssub_lpm.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/ssub_lpm_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sym_add_ser.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sym_add_ser_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/sym_sub_ser_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/tdl_da_lc.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/trig_buf.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/trig_buf_l.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/trig_buf_r.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/tsadd.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/tsadd_c.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/tsadd_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/tsadd_c_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/tsadd_lpm.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/tsadd_lpm_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/tsadd_lpm_reg_top_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/tsadd_reg_top_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/u2ssub.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/u2ssub_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/uadd.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/uadd_cen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE "ip/lpf400k/fir_compiler-library/wr_en_gen.v" -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k.v -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_bb.v -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k.bsf -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_ast.vhd -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_constraints.tcl -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_mlab.m -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_model.m -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k.vec -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/tb_lpf400k.vhd -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_msim.tcl -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_input.txt -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_coef_int.txt -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_param.txt -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k_silent_param.txt -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k.qip -qip ip/lpf400k/lpf400k.qip
+set_global_assignment -name MISC_FILE ip/lpf400k/lpf400k.html -qip ip/lpf400k/lpf400k.qip
 set_global_assignment -name VERILOG_FILE source/FFT_start.v
 set_global_assignment -name QIP_FILE const32.qip
+set_global_assignment -name IP_TOOL_NAME LPM_CONSTANT -qip const32.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip const32.qip
+set_global_assignment -name VERILOG_FILE const32.v -qip const32.qip
+set_global_assignment -name MISC_FILE const32.bsf -qip const32.qip
+set_global_assignment -name MISC_FILE const32_bb.v -qip const32.qip
+set_global_assignment -name MISC_FILE const32.inc -qip const32.qip
 set_global_assignment -name QIP_FILE mx2to1.qip
+set_global_assignment -name IP_TOOL_NAME LPM_MUX -qip mx2to1.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip mx2to1.qip
+set_global_assignment -name VERILOG_FILE mx2to1.v -qip mx2to1.qip
+set_global_assignment -name MISC_FILE mx2to1.bsf -qip mx2to1.qip
+set_global_assignment -name MISC_FILE mx2to1_bb.v -qip mx2to1.qip
+set_global_assignment -name MISC_FILE mx2to1.inc -qip mx2to1.qip
 set_global_assignment -name VERILOG_FILE source/filtmx_form.v
 set_global_assignment -name QIP_FILE ip/fft/fft32.qip
+set_global_assignment -name IP_TOOL_NAME FFT -qip ip/fft/fft32.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_math_pkg_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_lib_pkg_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_text_pkg_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_roundsat_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_source_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_sink_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_controller_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_alufp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_aslf_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_castftox_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_castxtof_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_clzf_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_mulfp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_addsub_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_bf_control_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_cma_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_core_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_counter_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_delay_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_bfi_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_bfii_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_cma_bfi_fp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_enable_control_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_stage_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_stg_pipe_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_stg_out_pipe_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_top_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_twrom_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_r22sdf_lib_pkg_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_bit_reverse_reverse_carry_adder_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_bit_reverse_core_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VHDL_FILE "ip/fft/fft-library/auk_dspip_bit_reverse_addr_control_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name VERILOG_FILE ip/fft/fft32.v -qip ip/fft/fft32.qip
+set_global_assignment -name SEARCH_PATH ip/fft/. -qip ip/fft/fft32.qip
+set_global_assignment -name SEARCH_PATH "ip/fft/fft-library" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_1dp_ram_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_1tdp_rom_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_3dp_rom_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_3pi_mram_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_3tdp_rom_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_4dp_ram_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_6tdp_rom_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_alt_shift_tdl_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_bfp_ctrl_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_bfp_i_1pt_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_bfp_i_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_bfp_o_1pt_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_bfp_o_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_burst_ctrl_de_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_burst_ctrl_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_burst_ctrl_qe_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_cmult_can_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_cmult_std_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_cnt_ctrl_de_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_cnt_ctrl_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_cxb_addr_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_cxb_data_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_cxb_data_mram_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_cxb_data_r_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_dataadgen_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_data_ram_dp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_data_ram_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_dft_bfp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_dft_bfp_sgl_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_dpi_mram_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_dp_mram_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_dualstream_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_dualstream_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_in_write_sgl_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_lcm_mult_2m_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_lcm_mult_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_lpprdadgen_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_lpprdadr2gen_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_lpp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_lpp_serial_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_lpp_serial_r2_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_mult_add_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_m_k_counter_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_pround_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_sglstream_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_sglstream_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_si_de_so_bb_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_si_de_so_bb_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_si_de_so_b_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_si_de_so_b_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_si_qe_so_bb_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_si_qe_so_bb_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_si_qe_so_b_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_si_qe_so_b_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_si_se_so_bb_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_si_se_so_bb_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_si_se_so_b_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_si_se_so_b_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_si_sose_so_b_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_si_sose_so_b_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/asj_fft_si_so_se_so_b_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_tdl_bit_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_tdl_bit_rst_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_tdl_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_tdl_rst_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_twadgen_dual_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_twadgen_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_twadsogen_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_twadsogen_q_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_twiddle_ctrl_qe_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_twid_rom_tdp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_unbburst_ctrl_de_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_unbburst_ctrl_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_unbburst_ctrl_qe_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_unbburst_sose_ctrl_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_wrengen_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/asj_fft_wrswgen_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_block_sink_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_block_source_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_controller_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_controller_pe_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_monitor_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_sink_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_sink_model_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_source_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_source_from_monitor_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_avalon_streaming_source_model_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_bit_reverse_addr_control_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_bit_reverse_core_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_bit_reverse_reverse_carry_adder_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/auk_dspip_bit_reverse_top_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_alufp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_aslf_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_asrf_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_castftox_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_castxtof_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_clzf_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_fpcompiler_mulfp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_lib_pkg_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_math_pkg_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_adder_fp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_addsub_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_bfii_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_bfi_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_bf_control_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_cma_adder_fp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_cma_bfi_fp_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_cma_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_core_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_counter_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_delay_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_enable_control_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_lib_pkg_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_stage_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_stg_out_pipe_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_stg_pipe_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name OCP_FILE "ip/fft/fft-library/auk_dspip_r22sdf_top_fft_90.ocp" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_top_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_r22sdf_twrom_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_roundsat_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/auk_dspip_text_pkg_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/fft_pack_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE "ip/fft/fft-library/twid_rom_fft_90.vhd" -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32.vo -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_tb.v -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_model.m -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_tb.m -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_nativelink.tcl -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/real_input.txt -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/imag_input.txt -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_fft.fsi -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_opt_twr1.hex -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_opt_twi1.hex -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_opt_twr2.hex -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_opt_twi2.hex -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32.v -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32_bb.v -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32.bsf -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32.qip -qip ip/fft/fft32.qip
+set_global_assignment -name MISC_FILE ip/fft/fft32.html -qip ip/fft/fft32.qip
 set_global_assignment -name VERILOG_FILE source/uart_msv.v
 set_global_assignment -name BDF_FILE source/test_rs232.bdf
 set_global_assignment -name VERILOG_FILE source/test_gen.v
 set_global_assignment -name BDF_FILE vga_test.bdf
 set_global_assignment -name QIP_FILE vga_pll.qip
+set_global_assignment -name IP_TOOL_NAME ALTPLL -qip vga_pll.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip vga_pll.qip
+set_global_assignment -name VERILOG_FILE vga_pll.v -qip vga_pll.qip
+set_global_assignment -name MISC_FILE vga_pll.bsf -qip vga_pll.qip
+set_global_assignment -name MISC_FILE vga_pll_bb.v -qip vga_pll.qip
+set_global_assignment -name MISC_FILE vga_pll.inc -qip vga_pll.qip
+set_global_assignment -name MISC_FILE vga_pll.ppf -qip vga_pll.qip
 set_global_assignment -name VERILOG_FILE source/VGA_BITSTREAM_MSV.v
 set_global_assignment -name QIP_FILE fifo32.qip
+set_global_assignment -name IP_TOOL_NAME FIFO -qip fifo32.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip fifo32.qip
+set_global_assignment -name VERILOG_FILE fifo32.v -qip fifo32.qip
+set_global_assignment -name MISC_FILE fifo32.bsf -qip fifo32.qip
+set_global_assignment -name MISC_FILE fifo32_bb.v -qip fifo32.qip
+set_global_assignment -name MISC_FILE fifo32.inc -qip fifo32.qip
 set_global_assignment -name VERILOG_FILE source/data_send.v
 set_global_assignment -name SIGNALTAP_FILE stp/stp1.stp
 set_global_assignment -name QIP_FILE ram.qip
+set_global_assignment -name IP_TOOL_NAME "RAM: 2-PORT" -qip ram.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ram.qip
+set_global_assignment -name VERILOG_FILE ram.v -qip ram.qip
+set_global_assignment -name MISC_FILE ram.bsf -qip ram.qip
+set_global_assignment -name MISC_FILE ram_bb.v -qip ram.qip
+set_global_assignment -name MISC_FILE ram.inc -qip ram.qip
 set_global_assignment -name VERILOG_FILE source/FillRAM.v
 set_global_assignment -name MIF_FILE ram_init.mif
 set_global_assignment -name VERILOG_FILE source/color_or.v
@@ -223,11 +831,29 @@ set_global_assignment -name VERILOG_FILE source/VGA_border.v
 set_global_assignment -name VERILOG_FILE source/VGA_bar.v
 set_global_assignment -name VERILOG_FILE source/fdiv10.v
 set_global_assignment -name QIP_FILE ip/ff/ff.qip
+set_global_assignment -name IP_TOOL_NAME LPM_FF -qip ip/ff/ff.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/ff/ff.qip
+set_global_assignment -name VERILOG_FILE ip/ff/ff.v -qip ip/ff/ff.qip
+set_global_assignment -name MISC_FILE ip/ff/ff.bsf -qip ip/ff/ff.qip
+set_global_assignment -name MISC_FILE ip/ff/ff_bb.v -qip ip/ff/ff.qip
+set_global_assignment -name MISC_FILE ip/ff/ff.inc -qip ip/ff/ff.qip
 set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name VERILOG_FILE source/signed_multiply.v
 set_global_assignment -name QIP_FILE ip/multiply/lpm_mult0.qip
+set_global_assignment -name IP_TOOL_NAME LPM_MULT -qip ip/multiply/lpm_mult0.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/multiply/lpm_mult0.qip
+set_global_assignment -name VERILOG_FILE ip/multiply/lpm_mult0.v -qip ip/multiply/lpm_mult0.qip
+set_global_assignment -name MISC_FILE ip/multiply/lpm_mult0.bsf -qip ip/multiply/lpm_mult0.qip
+set_global_assignment -name MISC_FILE ip/multiply/lpm_mult0_bb.v -qip ip/multiply/lpm_mult0.qip
+set_global_assignment -name MISC_FILE ip/multiply/lpm_mult0.inc -qip ip/multiply/lpm_mult0.qip
 set_global_assignment -name VERILOG_FILE source/expand_12to16.v
 set_global_assignment -name QIP_FILE ip/sub_sum/sum.qip
+set_global_assignment -name IP_TOOL_NAME LPM_ADD_SUB -qip ip/sub_sum/sum.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/sub_sum/sum.qip
+set_global_assignment -name VERILOG_FILE ip/sub_sum/sum.v -qip ip/sub_sum/sum.qip
+set_global_assignment -name MISC_FILE ip/sub_sum/sum.bsf -qip ip/sub_sum/sum.qip
+set_global_assignment -name MISC_FILE ip/sub_sum/sum_bb.v -qip ip/sub_sum/sum.qip
+set_global_assignment -name MISC_FILE ip/sub_sum/sum.inc -qip ip/sub_sum/sum.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE send_data.vwf
 set_global_assignment -name SIGNALTAP_FILE stp3.stp
 set_global_assignment -name SIGNALTAP_FILE stp_test_line2.stp
@@ -240,12 +866,37 @@ set_global_assignment -name VERILOG_FILE source/sub_const.v
 set_global_assignment -name SIGNALTAP_FILE stp/test_fft1.stp
 set_global_assignment -name SIGNALTAP_FILE stp/test_lpf8.stp
 set_global_assignment -name QIP_FILE ip/counter/cntr.qip
+set_global_assignment -name IP_TOOL_NAME LPM_COUNTER -qip ip/counter/cntr.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/counter/cntr.qip
+set_global_assignment -name VERILOG_FILE ip/counter/cntr.v -qip ip/counter/cntr.qip
+set_global_assignment -name MISC_FILE ip/counter/cntr.bsf -qip ip/counter/cntr.qip
+set_global_assignment -name MISC_FILE ip/counter/cntr_bb.v -qip ip/counter/cntr.qip
+set_global_assignment -name MISC_FILE ip/counter/cntr.inc -qip ip/counter/cntr.qip
 set_global_assignment -name BDF_FILE usd_cyclone3_test.bdf
 set_global_assignment -name SIGNALTAP_FILE test_data_from_work_board.stp
 set_global_assignment -name QIP_FILE fifo512.qip
+set_global_assignment -name IP_TOOL_NAME FIFO -qip fifo512.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip fifo512.qip
+set_global_assignment -name VERILOG_FILE fifo512.v -qip fifo512.qip
+set_global_assignment -name MISC_FILE fifo512.bsf -qip fifo512.qip
+set_global_assignment -name MISC_FILE fifo512_bb.v -qip fifo512.qip
+set_global_assignment -name MISC_FILE fifo512.inc -qip fifo512.qip
 set_global_assignment -name VERILOG_FILE source/spi_msv.v
 set_global_assignment -name QIP_FILE ip/pll_dac/pll_dac.qip
+set_global_assignment -name IP_TOOL_NAME ALTPLL -qip ip/pll_dac/pll_dac.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/pll_dac/pll_dac.qip
+set_global_assignment -name VERILOG_FILE ip/pll_dac/pll_dac.v -qip ip/pll_dac/pll_dac.qip
+set_global_assignment -name MISC_FILE ip/pll_dac/pll_dac.bsf -qip ip/pll_dac/pll_dac.qip
+set_global_assignment -name MISC_FILE ip/pll_dac/pll_dac_bb.v -qip ip/pll_dac/pll_dac.qip
+set_global_assignment -name MISC_FILE ip/pll_dac/pll_dac.inc -qip ip/pll_dac/pll_dac.qip
+set_global_assignment -name MISC_FILE ip/pll_dac/pll_dac.ppf -qip ip/pll_dac/pll_dac.qip
 set_global_assignment -name QIP_FILE const_dac.qip
+set_global_assignment -name IP_TOOL_NAME LPM_CONSTANT -qip const_dac.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip const_dac.qip
+set_global_assignment -name VERILOG_FILE const_dac.v -qip const_dac.qip
+set_global_assignment -name MISC_FILE const_dac.bsf -qip const_dac.qip
+set_global_assignment -name MISC_FILE const_dac_bb.v -qip const_dac.qip
+set_global_assignment -name MISC_FILE const_dac.inc -qip const_dac.qip
 set_global_assignment -name BDF_FILE dac_test.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE dac_test.vwf
 set_global_assignment -name SEARCH_PATH ip/nco/.
@@ -265,4 +916,11 @@ set_global_assignment -name SEARCH_PATH "ip/nco-library/"
 set_global_assignment -name SEARCH_PATH .
 set_global_assignment -name SEARCH_PATH "fft-library"
 set_global_assignment -name QIP_FILE ip/divide/divide_lpm.qip
+set_global_assignment -name IP_TOOL_NAME LPM_DIVIDE -qip ip/divide/divide_lpm.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip ip/divide/divide_lpm.qip
+set_global_assignment -name VERILOG_FILE ip/divide/divide_lpm.v -qip ip/divide/divide_lpm.qip
+set_global_assignment -name MISC_FILE ip/divide/divide_lpm.bsf -qip ip/divide/divide_lpm.qip
+set_global_assignment -name MISC_FILE ip/divide/divide_lpm_bb.v -qip ip/divide/divide_lpm.qip
+set_global_assignment -name MISC_FILE ip/divide/divide_lpm.inc -qip ip/divide/divide_lpm.qip
 set_global_assignment -name VERILOG_FILE source/binary2straight.v
+set_global_assignment -name TOP_LEVEL_ENTITY dac_test
