@@ -37,14 +37,14 @@ initial
     #0 clk = 1'b0;
     #0 reset_n = 1'b0;
     #0 clken = 1'b1;
-    #0 phi = 32'b00000011001100110011001100110011;
-    #349999999 reset_n = 1'b1;
+    #0 phi = 32'b00100000000000000000000000000000;
+    #-794967297 reset_n = 1'b1;
   end
 
 always
   begin
-    #25000000 clk = 1;
-    #25000000 clk = 0;
+    #250000000 clk = 1;
+    #250000000 clk = 0;
   end
 
 integer sin_ch, sin_print;

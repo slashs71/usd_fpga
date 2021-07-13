@@ -13,11 +13,11 @@
 %      ehre M is the number of channels
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 N=2048*1;
-fs = 20000.0;
+fs = 2000.0;
 % Input arrays
 
 % phi_inc_i : input phase increment : Length N (required)
-phi_inc_i = 53687091.*ones(1,N);
+phi_inc_i = 536870912.*ones(1,N);
 % freq_mod_i : frequency modulation input : Length N (optional)
 freq_mod_i = zeros(1,N);
 % phase_mod_i : phase modulation input : Length N (optional)

@@ -4,6 +4,7 @@ module spi_msv(
 //	input rx,
 	input	[11:0] idata,
 	input newTxData,
+	input iGain,
 	
 //	output reg oce,
 //	output reg[7:0] odata,
@@ -43,7 +44,7 @@ reg sclk_int;
 						if (newTxData)
 							begin
 								state		<=S4;
-								tx_data 	<={4'b0011, !idata[11],idata[10:0]};
+								tx_data 	<={2'b00,iGain,1'b1, idata[11:0]};
 								cnt			<= 0;
 								bit_cntr	<= 0;
 							end

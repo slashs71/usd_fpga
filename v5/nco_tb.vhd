@@ -70,7 +70,7 @@ signal phi      	        : std_logic_vector (APR-1 downto 0);
 signal sel_phi            : std_logic_vector(2 downto 0);
 signal sel_output         : std_logic_vector(2 downto 0);
 signal out_valid            : std_logic;
-constant clk_period_2 	: time := 25000000 ps;
+constant clk_period_2 	: time := 250000000 ps;
 
 
 begin
@@ -91,7 +91,7 @@ reset_n <= '0',
          '1' after 14*clk_period_2 ;
 clken <= '1';
 
-phi<="00000011001100110011001100110011";
+phi<="00100000000000000000000000000000";
 
 -----------------------------------------------------------------------------------------------
 -- Testbench Clock Generation
